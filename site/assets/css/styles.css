@@ -3,7 +3,7 @@
   --surface: #ffffff;
   --text: #222225;
   --muted: #595a61;
-  --accent: #f15b5f;
+  --accent: #c7353a;
   --accent-dark: #1f2024;
   --border: #d9dade;
   --max-width: 1060px;
@@ -76,7 +76,7 @@ a {
   top: 0;
   z-index: 8;
   background: var(--accent);
-  border-bottom: 1px solid #d74e51;
+  border-bottom: 1px solid #a5282c;
 }
 
 .header-row {
@@ -178,15 +178,46 @@ h1 {
   color: #ececef;
 }
 
-.primary-cta {
+.primary-cta,
+.secondary-cta {
   display: inline-block;
   padding: 0.5rem 0.95rem;
-  border: 1px solid #fff;
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 0.04em;
   font-size: 0.72rem;
   font-weight: 600;
+  transition: background-color 160ms ease, color 160ms ease, border-color 160ms ease;
+}
+
+.primary-cta {
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+.primary-cta:hover,
+.primary-cta:focus-visible {
+  color: var(--accent-dark);
+  background: #fff;
+}
+
+.secondary-cta {
+  color: #fff;
+  background: var(--accent);
+  border: 1px solid var(--accent);
+}
+
+.secondary-cta:hover,
+.secondary-cta:focus-visible {
+  color: var(--accent-dark);
+  background: #fff;
+  border-color: var(--accent-dark);
+}
+
+.primary-cta:focus-visible,
+.secondary-cta:focus-visible {
+  outline: 3px solid #0d67b5;
+  outline-offset: 3px;
 }
 
 .content-shell {

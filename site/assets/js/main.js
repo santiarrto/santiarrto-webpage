@@ -73,7 +73,7 @@ function renderProjects(projects) {
         <h3>${project.name}</h3>
         <p>${project.summary}</p>
         <p><strong>Stack:</strong> ${project.technologies.join(", ")}</p>
-        <p><a href="${project.url}" target="_blank" rel="noopener noreferrer">View project</a></p>
+        <p><a class="secondary-cta" href="${project.url}" target="_blank" rel="noopener noreferrer">View project</a></p>
       </article>
     `
     )
