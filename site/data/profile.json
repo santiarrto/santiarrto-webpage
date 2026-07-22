@@ -1,32 +1,118 @@
 {
   "name": "Santiago Arredondo Torres",
-  "title": "Software Engineer",
-  "summary": "Software Engineer focused on building secure, maintainable, and user-centered web solutions with clean architecture and practical delivery.",
-  "skills": [
+  "title": "Systems Engineer and Data Analyst",
+  "summary": "Systems Engineer and Data Analyst with over 6 years of experience in IT. Background in banking, journalism, and multimedia projects. Skilled in Python, SQL, Power BI, and web scraping. English level B2+ and a strong focus on leadership, mentoring, and talent development.",
+  "technologies": [
+    "Python",
     "JavaScript",
-    "TypeScript",
-    "Node.js",
-    "React",
-    "HTML5",
-    "CSS3",
-    "GitHub Actions",
-    "Testing"
+    "Java",
+    "R",
+    "Tableau",
+    "Power BI",
+    "AWS",
+    "Azure",
+    "Relational Databases",
+    "MongoDB"
+  ],
+  "softSkills": [
+    "Leadership and mentoring",
+    "Teamwork and collaboration",
+    "Assertive and commercial communication",
+    "Problem solving"
+  ],
+  "languages": [
+    {
+      "name": "English",
+      "level": "B2"
+    },
+    {
+      "name": "Spanish",
+      "level": "Native"
+    }
   ],
   "experience": [
     {
-      "role": "Software Engineer",
-      "company": "Independent / Consulting",
-      "period": "2021 - Present"
+      "role": "Sr Applications Management Engineer",
+      "company": "Endava SAS",
+      "period": "Sept 2019 - Present",
+      "summary": "As a Level 3 Support Engineer, I contributed to projects focused on critical incident handling, updates, requirement analysis, and application migration management.",
+      "highlights": [
+        "Led support for subscription and data management applications; built ETL-based monitoring and automation for user creation, page updates, and test validation.",
+        "Managed chatbot migrations across platforms, working with clients to define requirements and improve performance.",
+        "Served as a banking system support key member, resolving incidents and driving continuous improvements.",
+        "Mentored internship participants and later coordinated program content, interviews, and career coaching."
+      ]
     },
     {
-      "role": "Web Developer",
-      "company": "Product and Client Projects",
-      "period": "2019 - 2021"
+      "role": "Internship",
+      "company": "Endava SAS",
+      "period": "Jan 2019 - Jun 2019",
+      "summary": "Participated in technical workshops and practical challenges; collaborated on an internal IoT project covering analysis, development, and tracking."
+    }
+  ],
+  "education": [
+    {
+      "institution": "Universidad Jorge Tadeo Lozano",
+      "program": "Systems Engineering",
+      "period": "2015 - 2019"
+    },
+    {
+      "institution": "Microsoft",
+      "program": "Azure Fundamentals Certificate",
+      "period": "2024"
+    },
+    {
+      "institution": "Berlitz",
+      "program": "English B2",
+      "period": "2024"
+    }
+  ],
+  "certifications": [
+    {
+      "name": "Introduction to ChatGPT",
+      "issuer": "DataCamp",
+      "issued": "Apr 2023"
+    },
+    {
+      "name": "Ingles B2",
+      "issuer": "BBE Languages",
+      "issued": "Oct 2021"
+    },
+    {
+      "name": "Ingles B1+",
+      "issuer": "BBE Languages",
+      "issued": "Dec 2020"
+    },
+    {
+      "name": "Scrum Foundation Professional Certificate",
+      "issuer": "CertiProf",
+      "issued": "Jul 2020"
+    },
+    {
+      "name": "Curso de Introduccion a Amazon Web Services (AWS) desde cero",
+      "issuer": "Udemy",
+      "issued": "Nov 2019"
+    },
+    {
+      "name": "Introduction to Data Visualization in Python",
+      "issuer": "DataCamp",
+      "issued": "Jul 2019"
+    },
+    {
+      "name": "Intermediate SQL",
+      "issuer": "DataCamp",
+      "issued": "Jun 2019"
+    },
+    {
+      "name": "Intermediate Python",
+      "issuer": "DataCamp",
+      "issued": "Feb 2020"
     }
   ],
   "contact": {
     "email": "santiarrto@gmail.com",
-    "github": "https://github.com/santiarrto",
+    "phone": "+57 3006120069",
+    "location": "Bogota, Colombia",
     "linkedin": "https://www.linkedin.com/in/santiago-arredondo-torres"
   }
 }

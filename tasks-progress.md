@@ -2,9 +2,9 @@ Tasks Progress — Profile Website
 
 Summary
 
-- Total tasks: 23
+- Total tasks: 26
 - In progress: 0
-- Done: 16
+- Done: 19
 - Blocked: 1
 
 Progress board by workstream
@@ -45,6 +45,7 @@ Content — To Do
 - [x] CT-02: Create Projects Data File (`site/data/projects.json`)
 - [x] CT-03: Add Resume PDF (`site/assets/docs/resume.pdf`)
 - [x] CT-04: Add and Optimize Images (`site/assets/img/`)
+- [x] CT-05: Synchronize Profile Content from Provided CV/LinkedIn Images
 
 DevOps/Delivery — To Do
 
@@ -58,6 +59,11 @@ Documentation/Maintenance — To Do
 - [x] DOC-01: Keep Repository Documentation Aligned
 - [ ] DOC-02: Define Content Update Workflow
 - [ ] DOC-03: Add Release/Update Checklist
+- [x] DOC-04: Update Task and Plan Files for Content Synchronization Phase
+
+Operations/Cleanup — To Do
+
+- [x] OPS-01: Remove Legacy Unused Folders
 
 In Progress
 
@@ -81,6 +87,9 @@ Done
 - [x] DV-02: Add CI Workflow (`.github/workflows/ci.yml`)
 - [x] DV-03: Add CI Caching and Dependency Strategy
 - [x] DOC-01: Keep Repository Documentation Aligned
+- [x] CT-05: Synchronize Profile Content from Provided CV/LinkedIn Images
+- [x] DOC-04: Update Task and Plan Files for Content Synchronization Phase
+- [x] OPS-01: Remove Legacy Unused Folders
 
 Blocked
 

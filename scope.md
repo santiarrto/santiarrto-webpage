@@ -41,8 +41,6 @@ Target file/folder structure
 ├─ scope.md
 ├─ tasks.md
 ├─ tasks-progress.md
-├─ project/                  # design references and non-code project artifacts
-│  └─ .gitkeep
 ├─ site/
 │  ├─ index.html
 │  ├─ assets/

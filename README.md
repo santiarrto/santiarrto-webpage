@@ -46,8 +46,6 @@ The goal is to provide a professional, fast, and accessible presentation site wi
 ├─ scope.md
 ├─ tasks.md
 ├─ tasks-progress.md
-├─ project/
-│  └─ .gitkeep
 ├─ package.json
 ├─ playwright.config.ts
 ├─ site/

@@ -29,7 +29,6 @@ Proposed file/folder structure to implement
 
 ```text
 /
-├─ project/
 ├─ site/
 │  ├─ index.html
 │  ├─ assets/css/styles.css
@@ -83,3 +82,9 @@ Task breakdown
 - [ ] DOC-01: Keep Repository Documentation Aligned
 - [ ] DOC-02: Define Content Update Workflow
 - [ ] DOC-03: Add Release/Update Checklist
+
+7) Content synchronization and cleanup (current cycle)
+
+- [ ] CT-05: Synchronize Profile Content from Provided CV/LinkedIn Images
+- [ ] DOC-04: Update Task and Plan Files for the Content Synchronization Phase
+- [ ] OPS-01: Remove Legacy Unused Folders (e.g., `/project/`)

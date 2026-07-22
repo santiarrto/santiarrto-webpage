@@ -16,20 +16,49 @@ async function loadData() {
 function renderProfile(profile) {
   document.getElementById("about-summary").textContent = profile.summary;
   document.getElementById("email-link").href = `mailto:${profile.contact.email}`;
-  document.getElementById("github-link").href = profile.contact.github;
+  document.getElementById("email-link").textContent = profile.contact.email;
+  document.getElementById("phone-text").textContent = profile.contact.phone;
+  document.getElementById("location-text").textContent = profile.contact.location;
   document.getElementById("linkedin-link").href = profile.contact.linkedin;
+  document.getElementById("linkedin-link").textContent = "LinkedIn";
 
   const skillsList = document.getElementById("skills-list");
-  skillsList.innerHTML = profile.skills
+  skillsList.innerHTML = profile.technologies
     .map((skill) => `<li>${skill}</li>`)
+    .join("");
+
+  const softSkillsList = document.getElementById("soft-skills-list");
+  softSkillsList.innerHTML = profile.softSkills
+    .map((skill) => `<li>${skill}</li>`)
+    .join("");
+
+  const languagesList = document.getElementById("languages-list");
+  languagesList.innerHTML = profile.languages
+    .map((item) => `<li>${item.name} (${item.level})</li>`)
     .join("");
 
   const experienceList = document.getElementById("experience-list");
   experienceList.innerHTML = profile.experience
+    .map((item) => {
+      const highlights = Array.isArray(item.highlights)
+        ? `<ul>${item.highlights.map((h) => `<li>${h}</li>`).join("")}</ul>`
+        : "";
+      const summary = item.summary ? `<p>${item.summary}</p>` : "";
+      return `<li><strong>${item.role}</strong> — ${item.company} (${item.period})${summary}${highlights}</li>`;
+    })
+    .join("");
+
+  const educationList = document.getElementById("education-list");
+  educationList.innerHTML = profile.education
     .map(
       (item) =>
-        `<li><strong>${item.role}</strong> — ${item.company} (${item.period})</li>`
+        `<li><strong>${item.institution}</strong> — ${item.program} (${item.period})</li>`
     )
+    .join("");
+
+  const certificationsList = document.getElementById("certifications-list");
+  certificationsList.innerHTML = profile.certifications
+    .map((item) => `<li><strong>${item.name}</strong> — ${item.issuer} (${item.issued})</li>`)
     .join("");
 }
 
