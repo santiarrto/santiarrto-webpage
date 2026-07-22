@@ -2,9 +2,9 @@ Tasks Progress — Profile Website
 
 Summary
 
-- Total tasks: 26
+- Total tasks: 29
 - In progress: 0
-- Done: 23
+- Done: 25
 - Blocked: 1
 
 Progress board by workstream
@@ -26,6 +26,7 @@ UI/UX — To Do
 - [x] UI-04: Implement Styling System (`site/assets/css/styles.css`)
 - [x] UI-05: Add Interaction Enhancements (`site/assets/js/main.js`)
 - [x] UI-06: Optimize Image and Typography Rendering
+- [x] UI-07: Redesign Layout, Typography, and Color System to Match Reference Style
 
 Backend — To Do
 
@@ -60,6 +61,11 @@ Documentation/Maintenance — To Do
 - [x] DOC-02: Define Content Update Workflow
 - [x] DOC-03: Add Release/Update Checklist
 - [x] DOC-04: Update Task and Plan Files for Content Synchronization Phase
+- [x] DOC-05: Update planning and task tracking for redesign cycle
+
+Release — To Do
+
+- [ ] REL-01: Commit and Push Redesign Cycle Changes
 
 Operations/Cleanup — To Do
 
@@ -76,6 +82,7 @@ Done
 - [x] UI-04: Implement Styling System (`site/assets/css/styles.css`)
 - [x] UI-05: Add Interaction Enhancements (`site/assets/js/main.js`)
 - [x] UI-06: Optimize Image and Typography Rendering
+- [x] UI-07: Redesign Layout, Typography, and Color System to Match Reference Style
 - [x] BE-01: Implement Phase-1 Contact Strategy (`mailto:` only)
 - [x] QA-01: Add Smoke Tests (`tests/smoke.spec.ts`)
 - [x] QA-02: Add Accessibility Checks (`tests/accessibility.spec.ts`)
@@ -93,6 +100,7 @@ Done
 - [x] DOC-03: Add Release/Update Checklist
 - [x] CT-05: Synchronize Profile Content from Provided CV/LinkedIn Images
 - [x] DOC-04: Update Task and Plan Files for Content Synchronization Phase
+- [x] DOC-05: Update planning and task tracking for redesign cycle
 - [x] OPS-01: Remove Legacy Unused Folders
 
 Blocked

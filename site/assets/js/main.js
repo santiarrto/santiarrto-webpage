@@ -15,6 +15,7 @@ async function loadData() {
 
 function renderProfile(profile) {
   document.getElementById("about-summary").textContent = profile.summary;
+  document.getElementById("hero-role").textContent = profile.title;
   document.getElementById("email-link").href = `mailto:${profile.contact.email}`;
   document.getElementById("email-link").textContent = profile.contact.email;
   document.getElementById("phone-text").textContent = profile.contact.phone;
@@ -66,8 +67,9 @@ function renderProjects(projects) {
   const projectsList = document.getElementById("projects-list");
   projectsList.innerHTML = projects
     .map(
-      (project) => `
+      (project, index) => `
       <article class="card">
+        <p><strong>${String(index + 1).padStart(2, "0")}</strong></p>
         <h3>${project.name}</h3>
         <p>${project.summary}</p>
         <p><strong>Stack:</strong> ${project.technologies.join(", ")}</p>

@@ -111,3 +111,14 @@ Task breakdown
 - [ ] CT-05: Synchronize Profile Content from Provided CV/LinkedIn Images
 - [ ] DOC-04: Update Task and Plan Files for the Content Synchronization Phase
 - [ ] OPS-01: Remove Legacy Unused Folders (e.g., `/project/`)
+
+8) Visual redesign cycle (reference style)
+
+- [x] UI-07: Redesign Layout, Typography, and Color System to Match Reference Style
+  - [x] Add dark announcement bar + accent navigation style
+  - [x] Convert About area into a high-contrast hero section
+  - [x] Update typography scale and uppercase section heading style
+  - [x] Restyle project cards to bold dark-card visual blocks with numeric labels
+  - [x] Keep existing profile content and accessibility structure functional
+- [x] DOC-05: Update planning and task tracking for redesign cycle
+- [ ] REL-01: Commit and Push Redesign Cycle Changes

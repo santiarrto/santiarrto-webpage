@@ -13,12 +13,19 @@
   <body>
     <a class="skip-link" href="#main-content">Skip to content</a>
 
+    <div class="announcement-bar">
+      <div class="container announcement-content">
+        <span class="announcement-pill">Announcement</span>
+        <span>Design refresh based on latest profile direction</span>
+      </div>
+    </div>
+
     <header class="site-header">
       <div class="container header-row">
-        <div>
-          <p class="eyebrow">Software Engineer</p>
-          <h1 id="site-title">Santiago Arredondo Torres</h1>
-        </div>
+        <a class="brand" href="#about" aria-label="Homepage">
+          <span class="brand-mark">| | |</span>
+          <span class="brand-name">SAT</span>
+        </a>
         <button
           id="menu-toggle"
           class="menu-toggle"
@@ -41,21 +48,28 @@
       </nav>
     </header>
 
-    <main id="main-content" class="container">
-      <section id="about" aria-labelledby="about-title">
-        <h2 id="about-title">About</h2>
+    <section id="about" class="hero-section" aria-labelledby="about-title">
+      <div class="container hero-content">
+        <p class="eyebrow" id="hero-role">Loading role...</p>
+        <h1 id="site-title">Santiago Arredondo Torres</h1>
+        <h2 id="about-title">Building reliable digital experiences</h2>
         <p id="about-summary">Loading profile summary...</p>
-      </section>
+        <a class="primary-cta" href="#experience">View Experience</a>
+      </div>
+    </section>
 
+    <main id="main-content" class="container content-shell">
       <section id="skills" aria-labelledby="skills-title">
-        <h2 id="skills-title">Skills</h2>
+        <h2 id="skills-title">Technologies</h2>
+        <p class="section-kicker">Core tools for software delivery</p>
         <ul id="skills-list" class="tag-list" aria-live="polite"></ul>
         <h3>Soft skills</h3>
         <ul id="soft-skills-list" class="tag-list" aria-live="polite"></ul>
       </section>
 
       <section id="projects" aria-labelledby="projects-title">
-        <h2 id="projects-title">Projects</h2>
+        <h2 id="projects-title">Featured projects</h2>
+        <p class="section-kicker">Ways I create value through engineering</p>
         <div id="projects-list" class="cards" aria-live="polite"></div>
       </section>
 
