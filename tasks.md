@@ -61,7 +61,13 @@ Task breakdown
 
 - [ ] QA-01: Add Smoke Tests (`tests/smoke.spec.ts`)
 - [ ] QA-02: Add Accessibility Checks (`tests/accessibility.spec.ts`)
-- [ ] QA-03: Add Manual Regression Checklist
+- [x] QA-03: Add Manual Regression Checklist
+  - [x] Verify page loads and all main sections render (About, Skills, Projects, Experience, Education, Certifications, Languages, Contact, Resume)
+  - [x] Verify nav anchors scroll to expected sections
+  - [x] Verify responsive behavior on mobile width (menu toggle works and content is readable)
+  - [x] Verify contact data is rendered from `profile.json` (email, phone, location, LinkedIn)
+  - [x] Verify external links open safely (`rel=\"noopener noreferrer\"`)
+  - [x] Verify resume download link is present and responds
 
 4) Content
 
@@ -75,13 +81,30 @@ Task breakdown
 - [ ] DV-01: Configure GitHub Pages Deployment
 - [ ] DV-02: Add CI Workflow (`.github/workflows/ci.yml`)
 - [ ] DV-03: Add CI Caching and Dependency Strategy
-- [ ] DV-04: Add Deployment Verification Checklist
+- [x] DV-04: Add Deployment Verification Checklist
+  - [x] Confirm latest commit is present on `main`
+  - [x] Confirm GitHub Actions CI job succeeded for commit
+  - [x] Confirm Pages deploy job succeeded and published from `site/`
+  - [x] Verify production URL returns HTTP 200
+  - [x] Verify updated profile content is visible in production
+  - [x] Verify no broken links in navigation and contact areas
 
 6) Documentation and maintenance
 
 - [ ] DOC-01: Keep Repository Documentation Aligned
-- [ ] DOC-02: Define Content Update Workflow
-- [ ] DOC-03: Add Release/Update Checklist
+- [x] DOC-02: Define Content Update Workflow
+  - [x] Edit profile content in `site/data/profile.json`
+  - [x] Edit project content in `site/data/projects.json`
+  - [x] Add/replace assets in `site/assets/docs/` and `site/assets/img/`
+  - [x] Run local preview (`npm run start`) and visual sanity checks
+  - [x] Run tests when Node 18+ is available (`npm run test:e2e`)
+  - [x] Commit with task references and push to `main`
+- [x] DOC-03: Add Release/Update Checklist
+  - [x] Confirm tasks-progress summary counts are updated
+  - [x] Confirm scope/tasks docs reflect current implementation
+  - [x] Confirm CI and deployment are green
+  - [x] Verify production profile data and contact links
+  - [x] Record any blocked items and next actions
 
 7) Content synchronization and cleanup (current cycle)
 

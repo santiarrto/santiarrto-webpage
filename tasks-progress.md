@@ -4,7 +4,7 @@ Summary
 
 - Total tasks: 26
 - In progress: 0
-- Done: 19
+- Done: 23
 - Blocked: 1
 
 Progress board by workstream
@@ -37,7 +37,7 @@ Testing — To Do
 
 - [x] QA-01: Add Smoke Tests (`tests/smoke.spec.ts`)
 - [x] QA-02: Add Accessibility Checks (`tests/accessibility.spec.ts`)
-- [ ] QA-03: Add Manual Regression Checklist
+- [x] QA-03: Add Manual Regression Checklist
 
 Content — To Do
 
@@ -52,13 +52,13 @@ DevOps/Delivery — To Do
 - [x] DV-01: Configure GitHub Pages Deployment
 - [x] DV-02: Add CI Workflow (`.github/workflows/ci.yml`)
 - [x] DV-03: Add CI Caching and Dependency Strategy
-- [ ] DV-04: Add Deployment Verification Checklist
+- [x] DV-04: Add Deployment Verification Checklist
 
 Documentation/Maintenance — To Do
 
 - [x] DOC-01: Keep Repository Documentation Aligned
-- [ ] DOC-02: Define Content Update Workflow
-- [ ] DOC-03: Add Release/Update Checklist
+- [x] DOC-02: Define Content Update Workflow
+- [x] DOC-03: Add Release/Update Checklist
 - [x] DOC-04: Update Task and Plan Files for Content Synchronization Phase
 
 Operations/Cleanup — To Do
@@ -86,7 +86,11 @@ Done
 - [x] DV-01: Configure GitHub Pages Deployment
 - [x] DV-02: Add CI Workflow (`.github/workflows/ci.yml`)
 - [x] DV-03: Add CI Caching and Dependency Strategy
+- [x] QA-03: Add Manual Regression Checklist
+- [x] DV-04: Add Deployment Verification Checklist
 - [x] DOC-01: Keep Repository Documentation Aligned
+- [x] DOC-02: Define Content Update Workflow
+- [x] DOC-03: Add Release/Update Checklist
 - [x] CT-05: Synchronize Profile Content from Provided CV/LinkedIn Images
 - [x] DOC-04: Update Task and Plan Files for Content Synchronization Phase
 - [x] OPS-01: Remove Legacy Unused Folders

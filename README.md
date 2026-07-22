@@ -125,6 +125,32 @@ npm run test:e2e
 - Replace it with `site/assets/docs/resume.pdf` when final resume is ready.
 - Add final project/profile images under `site/assets/img/`.
 
+## Content update workflow
+
+1. Update profile and resume data in `site/data/profile.json`.
+2. Update project entries in `site/data/projects.json`.
+3. Add or replace assets in `site/assets/docs/` and `site/assets/img/`.
+4. Run local preview with `npm run start` and validate all sections render.
+5. Run `npm run test:e2e` when using Node.js 18+.
+6. Commit and push changes after docs/task updates.
+
+## Manual regression checklist (QA-03)
+
+- Home page loads and title is correct.
+- All key sections are visible and reachable from navigation.
+- Contact details render correctly from JSON (email, phone, location, LinkedIn).
+- Mobile menu toggle works on narrow screens.
+- Resume download link is present and reachable.
+- No obvious visual layout breakage in desktop/mobile.
+
+## Deployment verification checklist (DV-04)
+
+- `main` contains the intended commit.
+- GitHub Actions CI passes for the commit.
+- GitHub Pages deploy job succeeds and publishes from `site/`.
+- Production URL returns HTTP 200 and serves latest content.
+- Contact links and navigation work in production.
+
 ## Related Documentation
 
 - [scope.md](C:/Users/santi/OneDrive/Documentos/Projects/santiarrto-webpage/scope.md) — scope, acceptance criteria, architecture baseline
