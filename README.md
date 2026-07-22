@@ -48,6 +48,8 @@ The goal is to provide a professional, fast, and accessible presentation site wi
 ├─ tasks-progress.md
 ├─ project/
 │  └─ .gitkeep
+├─ package.json
+├─ playwright.config.ts
 ├─ site/
 │  ├─ index.html
 │  ├─ assets/
@@ -95,13 +97,35 @@ Examples:
 
 ## Local Preview
 
-If the site is static HTML, run from the project root:
+Prerequisite:
+
+- Node.js 18 or higher
+
+Install dependencies:
 
 ```bash
-python -m http.server
+npm install
 ```
 
-Then open `http://localhost:8000`.
+Run local preview server from the project root:
+
+```bash
+npm run start
+```
+
+Then open `http://127.0.0.1:4173`.
+
+Run tests:
+
+```bash
+npm run test:e2e
+```
+
+## Current placeholders
+
+- Resume placeholder is at `site/assets/docs/resume-placeholder.txt`.
+- Replace it with `site/assets/docs/resume.pdf` when final resume is ready.
+- Add final project/profile images under `site/assets/img/`.
 
 ## Related Documentation
 

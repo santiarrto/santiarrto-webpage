@@ -1,0 +1,5 @@
+Resume placeholder
+
+Replace this file with Santiago Arredondo Torres final resume PDF:
+- target path: site/assets/docs/resume.pdf
+- update link in site/index.html if filename changes

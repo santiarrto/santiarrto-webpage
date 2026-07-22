@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Personal Profile Website",
+    "summary": "Static, accessible profile site with JSON-driven content and CI validation.",
+    "technologies": ["HTML5", "CSS3", "JavaScript", "GitHub Actions"],
+    "url": "https://github.com/santiarrto/santiarrto-webpage"
+  },
+  {
+    "name": "Frontend Delivery Starter",
+    "summary": "Starter baseline for fast setup of responsive UI and automated quality checks.",
+    "technologies": ["Playwright", "Node.js", "GitHub Pages"],
+    "url": "https://github.com/santiarrto"
+  }
+]

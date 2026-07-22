@@ -1,0 +1,16 @@
+{
+  "name": "santiarrto-webpage",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Santiago Arredondo Torres profile website",
+  "scripts": {
+    "start": "http-server ./site -p 4173 -s",
+    "test:e2e": "playwright test",
+    "test:e2e:headed": "playwright test --headed"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.10.2",
+    "@playwright/test": "^1.54.2",
+    "http-server": "^14.1.1"
+  }
+}

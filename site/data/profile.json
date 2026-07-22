@@ -1,0 +1,32 @@
+{
+  "name": "Santiago Arredondo Torres",
+  "title": "Software Engineer",
+  "summary": "Software Engineer focused on building secure, maintainable, and user-centered web solutions with clean architecture and practical delivery.",
+  "skills": [
+    "JavaScript",
+    "TypeScript",
+    "Node.js",
+    "React",
+    "HTML5",
+    "CSS3",
+    "GitHub Actions",
+    "Testing"
+  ],
+  "experience": [
+    {
+      "role": "Software Engineer",
+      "company": "Independent / Consulting",
+      "period": "2021 - Present"
+    },
+    {
+      "role": "Web Developer",
+      "company": "Product and Client Projects",
+      "period": "2019 - 2021"
+    }
+  ],
+  "contact": {
+    "email": "santiarrto@gmail.com",
+    "github": "https://github.com/santiarrto",
+    "linkedin": "https://www.linkedin.com/in/santiago-arredondo-torres"
+  }
+}

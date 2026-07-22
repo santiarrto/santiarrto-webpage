@@ -4,8 +4,8 @@ Summary
 
 - Total tasks: 23
 - In progress: 0
-- Done: 0
-- Blocked: 0
+- Done: 16
+- Blocked: 1
 
 Progress board by workstream
 
@@ -20,42 +20,42 @@ Task ID convention reference
 
 UI/UX — To Do
 
-- [ ] UI-01: Define Information Architecture and Section Order
+- [x] UI-01: Define Information Architecture and Section Order
 - [ ] UI-02: Design Responsive Mobile-First Wireframe
-- [ ] UI-03: Implement Semantic Page Layout (`site/index.html`)
-- [ ] UI-04: Implement Styling System (`site/assets/css/styles.css`)
-- [ ] UI-05: Add Interaction Enhancements (`site/assets/js/main.js`)
-- [ ] UI-06: Optimize Image and Typography Rendering
+- [x] UI-03: Implement Semantic Page Layout (`site/index.html`)
+- [x] UI-04: Implement Styling System (`site/assets/css/styles.css`)
+- [x] UI-05: Add Interaction Enhancements (`site/assets/js/main.js`)
+- [x] UI-06: Optimize Image and Typography Rendering
 
 Backend — To Do
 
-- [ ] BE-01: Implement Phase-1 Contact Strategy (`mailto:` only)
+- [x] BE-01: Implement Phase-1 Contact Strategy (`mailto:` only)
 - [ ] BE-02: Validate No Secrets or Runtime Sensitive Config
 - [ ] BE-03: Define Optional Phase-2 Serverless Contact Requirements
 
 Testing — To Do
 
-- [ ] QA-01: Add Smoke Tests (`tests/smoke.spec.ts`)
-- [ ] QA-02: Add Accessibility Checks (`tests/accessibility.spec.ts`)
+- [x] QA-01: Add Smoke Tests (`tests/smoke.spec.ts`)
+- [x] QA-02: Add Accessibility Checks (`tests/accessibility.spec.ts`)
 - [ ] QA-03: Add Manual Regression Checklist
 
 Content — To Do
 
-- [ ] CT-01: Create Profile Data File (`site/data/profile.json`)
-- [ ] CT-02: Create Projects Data File (`site/data/projects.json`)
-- [ ] CT-03: Add Resume PDF (`site/assets/docs/resume.pdf`)
-- [ ] CT-04: Add and Optimize Images (`site/assets/img/`)
+- [x] CT-01: Create Profile Data File (`site/data/profile.json`)
+- [x] CT-02: Create Projects Data File (`site/data/projects.json`)
+- [x] CT-03: Add Resume PDF (`site/assets/docs/resume.pdf`)
+- [x] CT-04: Add and Optimize Images (`site/assets/img/`)
 
 DevOps/Delivery — To Do
 
-- [ ] DV-01: Configure GitHub Pages Deployment
-- [ ] DV-02: Add CI Workflow (`.github/workflows/ci.yml`)
-- [ ] DV-03: Add CI Caching and Dependency Strategy
+- [x] DV-01: Configure GitHub Pages Deployment
+- [x] DV-02: Add CI Workflow (`.github/workflows/ci.yml`)
+- [x] DV-03: Add CI Caching and Dependency Strategy
 - [ ] DV-04: Add Deployment Verification Checklist
 
 Documentation/Maintenance — To Do
 
-- [ ] DOC-01: Keep Repository Documentation Aligned
+- [x] DOC-01: Keep Repository Documentation Aligned
 - [ ] DOC-02: Define Content Update Workflow
 - [ ] DOC-03: Add Release/Update Checklist
 
@@ -65,7 +65,26 @@ In Progress
 
 Done
 
-- [ ] No completed tasks yet
+- [x] UI-01: Define Information Architecture and Section Order
+- [x] UI-03: Implement Semantic Page Layout (`site/index.html`)
+- [x] UI-04: Implement Styling System (`site/assets/css/styles.css`)
+- [x] UI-05: Add Interaction Enhancements (`site/assets/js/main.js`)
+- [x] UI-06: Optimize Image and Typography Rendering
+- [x] BE-01: Implement Phase-1 Contact Strategy (`mailto:` only)
+- [x] QA-01: Add Smoke Tests (`tests/smoke.spec.ts`)
+- [x] QA-02: Add Accessibility Checks (`tests/accessibility.spec.ts`)
+- [x] CT-01: Create Profile Data File (`site/data/profile.json`)
+- [x] CT-02: Create Projects Data File (`site/data/projects.json`)
+- [x] CT-03: Add Resume PDF (`site/assets/docs/resume.pdf`)
+- [x] CT-04: Add and Optimize Images (`site/assets/img/`)
+- [x] DV-01: Configure GitHub Pages Deployment
+- [x] DV-02: Add CI Workflow (`.github/workflows/ci.yml`)
+- [x] DV-03: Add CI Caching and Dependency Strategy
+- [x] DOC-01: Keep Repository Documentation Aligned
+
+Blocked
+
+- [ ] Local Playwright execution requires Node.js 18+ (current environment is Node.js 12.18.0).
 
 How to use
 

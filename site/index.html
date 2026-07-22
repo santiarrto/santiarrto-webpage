@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Profile website for Santiago Arredondo Torres, Software Engineer."
+    />
+    <title>Santiago Arredondo Torres | Software Engineer</title>
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <header class="site-header">
+      <div class="container header-row">
+        <div>
+          <p class="eyebrow">Software Engineer</p>
+          <h1 id="site-title">Santiago Arredondo Torres</h1>
+        </div>
+        <button
+          id="menu-toggle"
+          class="menu-toggle"
+          aria-expanded="false"
+          aria-controls="primary-nav"
+        >
+          Menu
+        </button>
+      </div>
+      <nav id="primary-nav" class="primary-nav container" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+        <a href="#resume">Resume</a>
+      </nav>
+    </header>
+
+    <main id="main-content" class="container">
+      <section id="about" aria-labelledby="about-title">
+        <h2 id="about-title">About</h2>
+        <p id="about-summary">Loading profile summary...</p>
+      </section>
+
+      <section id="skills" aria-labelledby="skills-title">
+        <h2 id="skills-title">Skills</h2>
+        <ul id="skills-list" class="tag-list" aria-live="polite"></ul>
+      </section>
+
+      <section id="projects" aria-labelledby="projects-title">
+        <h2 id="projects-title">Projects</h2>
+        <div id="projects-list" class="cards" aria-live="polite"></div>
+      </section>
+
+      <section id="experience" aria-labelledby="experience-title">
+        <h2 id="experience-title">Experience</h2>
+        <ul id="experience-list" class="timeline" aria-live="polite"></ul>
+      </section>
+
+      <section id="contact" aria-labelledby="contact-title">
+        <h2 id="contact-title">Contact</h2>
+        <ul>
+          <li><a id="email-link" href="mailto:santiarrto@gmail.com">Email</a></li>
+          <li><a id="github-link" href="#" rel="noopener noreferrer">GitHub</a></li>
+          <li>
+            <a id="linkedin-link" href="#" rel="noopener noreferrer">LinkedIn</a>
+          </li>
+        </ul>
+      </section>
+
+      <section id="resume" aria-labelledby="resume-title">
+        <h2 id="resume-title">Resume</h2>
+        <p>
+          <a href="./assets/docs/resume-placeholder.txt" download>
+            Download resume
+          </a>
+        </p>
+      </section>
+    </main>
+
+    <footer class="site-footer container">
+      <small>© <span id="year"></span> Santiago Arredondo Torres</small>
+    </footer>
+
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>
