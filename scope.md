@@ -1,49 +1,113 @@
-Project scope — Profile Website for Santiago Arredondo Torres
+Project Scope — Santiago Arredondo Torres Profile Website
 
 Overview
 
-This document defines the scope for the profile website project. It describes what the site will include, the acceptance criteria, and what is explicitly out of scope.
+Build a simple, secure, and easy-to-maintain website to present Santiago Arredondo Torres as a Software Engineer. The site will be static-first, fast, accessible, and straightforward to update through repository files.
 
-In scope (initial proposal)
+Selected sections
 
-- A small, static, responsive profile site for Santiago Arredondo Torres with the following sections:
-  - About / Bio
-  - Skills and technologies
-  - Projects (select notable projects with short descriptions and links)
-  - Experience / Timeline
-  - Education (optional)
-  - Contact (email and social links; optional contact form)
-  - Resume download (PDF)
+- About
+- Skills
+- Projects
+- Experience
+- Contact
+- Resume download
 
-- Implementation priorities:
-  - Minimal dependencies; prefer static HTML/CSS or a lightweight static site generator
-  - Accessibility (semantic markup, keyboard navigation, alt text)
-  - Performance: optimized images, limited third-party scripts
-  - Security: no server-side accounts, no unnecessary data collection
-  - Easy-to-update content (markdown or simple data files if using SSG)
+Technology baseline
 
-Out of scope (initial)
+- Frontend/UI:
+  - HTML5 (semantic structure)
+  - CSS3 (responsive layout and design tokens through CSS variables)
+  - Vanilla JavaScript (small progressive enhancements only)
+- Content management:
+  - JSON files for profile and projects data
+  - Static assets in dedicated folders
+- Backend:
+  - No traditional backend server
+  - Contact via `mailto:` as default (secure and simple)
+  - Optional future serverless endpoint if form submission is later required
+- Testing:
+  - Playwright for smoke tests
+  - Axe accessibility checks (through Playwright integration)
+- Hosting/DevOps:
+  - GitHub Pages for static hosting
+  - GitHub Actions for CI (lint/test/build checks when available)
 
-- Full-featured blog or CMS-driven site (unless specifically requested)
-- User accounts or server-side user-auth
-- E-commerce or payment features
+Target file/folder structure
+
+```text
+/
+├─ README.md
+├─ scope.md
+├─ tasks.md
+├─ tasks-progress.md
+├─ project/                  # design references and non-code project artifacts
+│  └─ .gitkeep
+├─ site/
+│  ├─ index.html
+│  ├─ assets/
+│  │  ├─ css/
+│  │  │  └─ styles.css
+│  │  ├─ js/
+│  │  │  └─ main.js
+│  │  ├─ img/
+│  │  └─ docs/
+│  │     └─ resume.pdf
+│  └─ data/
+│     ├─ profile.json
+│     └─ projects.json
+├─ tests/
+│  ├─ smoke.spec.ts
+│  └─ accessibility.spec.ts
+└─ .github/
+   └─ workflows/
+      └─ ci.yml
+```
+
+In scope
+
+- Build a responsive single-page profile site with the selected sections.
+- Implement accessible semantic structure and keyboard-friendly navigation.
+- Render projects and profile details from editable data files.
+- Add resume download link and contact links.
+- Prepare baseline automated smoke and accessibility checks.
+- Deploy a static site through GitHub Pages.
+
+Out of scope
+
+- User accounts and authentication
+- Database-backed dynamic features
+- Blog/CMS implementation
+- E-commerce/payment flows
+- Collecting personal data through custom backend forms (for phase 1)
+
+Security, maintainability, and quality requirements
+
+- Security:
+  - HTTPS-only hosting
+  - No secrets in repository
+  - No unnecessary third-party scripts
+- Maintainability:
+  - Clear folder conventions
+  - Content updates by editing JSON/data files
+  - Minimal dependencies
+- Quality:
+  - Mobile-first responsive behavior
+  - Lighthouse-oriented performance (optimized images and lean JS)
+  - Basic automated smoke and accessibility test coverage
 
 Acceptance criteria
 
-- Site renders correctly on desktop and mobile
-- Content is editable in repository (markdown or clear template files)
-- HTTPS hosting configured and basic security headers set
-- Resume is downloadable and contact information is present
+- All selected sections are visible and correctly linked in navigation.
+- Site works on modern desktop and mobile browsers.
+- Content can be updated without changing core layout code.
+- Resume download and contact links are functional.
+- Deployment to GitHub Pages succeeds from main branch.
+- Smoke tests and accessibility checks run successfully in CI.
 
-Questions to complete the scope (placeholders below will be filled after answers)
+Task tracking convention
 
-- Sections to include: (answer required)
-- Tech preference: (plain HTML/CSS, SSG e.g., Hugo/Jekyll, or a framework)
-- Hosting preference: (GitHub Pages, Netlify, Vercel, custom)
-- Contact method: (mailto, contact form, or both)
-- Privacy/data: (will any data be collected via a form?)
-- Timeline / priority features: (must-have vs nice-to-have)
-
-Next steps
-
-- Provide answers to the questions above so the scope can be finalized. The repository has a tasks list and a progress file to track work.
+- Tasks in planning and execution documents must use:
+  - `ID`: `<WORKSTREAM>-<NUMBER>`
+  - `Name`: concise action title in Title Case
+- Workstream codes: `UI`, `BE`, `QA`, `CT`, `DV`, `DOC`.
