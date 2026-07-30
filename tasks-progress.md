@@ -2,9 +2,9 @@ Tasks Progress — Profile Website
 
 Summary
 
-- Total tasks: 29
+- Total tasks: 32
 - In progress: 0
-- Done: 25
+- Done: 30
 - Blocked: 1
 
 Progress board by workstream
@@ -21,18 +21,19 @@ Task ID convention reference
 UI/UX — To Do
 
 - [x] UI-01: Define Information Architecture and Section Order
-- [ ] UI-02: Design Responsive Mobile-First Wireframe
+- [x] UI-02: Design Responsive Mobile-First Wireframe
 - [x] UI-03: Implement Semantic Page Layout (`site/index.html`)
 - [x] UI-04: Implement Styling System (`site/assets/css/styles.css`)
 - [x] UI-05: Add Interaction Enhancements (`site/assets/js/main.js`)
 - [x] UI-06: Optimize Image and Typography Rendering
 - [x] UI-07: Redesign Layout, Typography, and Color System to Match Reference Style
+- [x] UI-08: Refine Visual Style, Button System, and Typography Consistency
 
 Backend — To Do
 
 - [x] BE-01: Implement Phase-1 Contact Strategy (`mailto:` only)
-- [ ] BE-02: Validate No Secrets or Runtime Sensitive Config
-- [ ] BE-03: Define Optional Phase-2 Serverless Contact Requirements
+- [x] BE-02: Validate No Secrets or Runtime Sensitive Config
+- [x] BE-03: Define Optional Phase-2 Serverless Contact Requirements
 
 Testing — To Do
 
@@ -83,6 +84,8 @@ Done
 - [x] UI-05: Add Interaction Enhancements (`site/assets/js/main.js`)
 - [x] UI-06: Optimize Image and Typography Rendering
 - [x] UI-07: Redesign Layout, Typography, and Color System to Match Reference Style
+- [x] UI-08: Refine Visual Style, Button System, and Typography Consistency
+- [x] UI-09: Refine visual polish, CTA buttons, and typography system
 - [x] BE-01: Implement Phase-1 Contact Strategy (`mailto:` only)
 - [x] QA-01: Add Smoke Tests (`tests/smoke.spec.ts`)
 - [x] QA-02: Add Accessibility Checks (`tests/accessibility.spec.ts`)
@@ -101,6 +104,7 @@ Done
 - [x] CT-05: Synchronize Profile Content from Provided CV/LinkedIn Images
 - [x] DOC-04: Update Task and Plan Files for Content Synchronization Phase
 - [x] DOC-05: Update planning and task tracking for redesign cycle
+- [x] DOC-06: Refresh planning and task tracking after the visual polish and content alignment pass
 - [x] OPS-01: Remove Legacy Unused Folders
 
 Blocked
