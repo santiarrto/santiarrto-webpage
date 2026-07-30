@@ -45,17 +45,18 @@ Task breakdown
 1) UI/UX
 
 - [ ] UI-01: Define Information Architecture and Section Order
-- [ ] UI-02: Design Responsive Mobile-First Wireframe
-- [ ] UI-03: Implement Semantic Page Layout (`site/index.html`)
-- [ ] UI-04: Implement Styling System (`site/assets/css/styles.css`)
-- [ ] UI-05: Add Interaction Enhancements (`site/assets/js/main.js`)
-- [ ] UI-06: Optimize Image and Typography Rendering
+- [x] UI-02: Design Responsive Mobile-First Wireframe
+- [x] UI-03: Implement Semantic Page Layout (`site/index.html`)
+- [x] UI-04: Implement Styling System (`site/assets/css/styles.css`)
+- [x] UI-05: Add Interaction Enhancements (`site/assets/js/main.js`)
+- [x] UI-06: Optimize Image and Typography Rendering
+- [x] UI-09: Refine visual polish, CTA buttons, and typography system
 
 2) Backend (phase 1 static-first)
 
 - [ ] BE-01: Implement Phase-1 Contact Strategy (`mailto:` only)
-- [ ] BE-02: Validate No Secrets or Runtime Sensitive Config
-- [ ] BE-03: Define Optional Phase-2 Serverless Contact Requirements
+- [x] BE-02: Validate No Secrets or Runtime Sensitive Config
+- [x] BE-03: Define Optional Phase-2 Serverless Contact Requirements
 
 3) Testing
 
@@ -66,7 +67,7 @@ Task breakdown
   - [x] Verify nav anchors scroll to expected sections
   - [x] Verify responsive behavior on mobile width (menu toggle works and content is readable)
   - [x] Verify contact data is rendered from `profile.json` (email, phone, location, LinkedIn)
-  - [x] Verify external links open safely (`rel=\"noopener noreferrer\"`)
+  - [x] Verify external links open safely (`rel="noopener noreferrer"`)
   - [x] Verify resume download link is present and responds
 
 4) Content
@@ -91,8 +92,9 @@ Task breakdown
 
 6) Documentation and maintenance
 
-- [ ] DOC-01: Keep Repository Documentation Aligned
+- [x] DOC-01: Keep Repository Documentation Aligned
 - [x] DOC-02: Define Content Update Workflow
+- [x] DOC-06: Refresh planning and task tracking after the visual polish and content alignment pass
   - [x] Edit profile content in `site/data/profile.json`
   - [x] Edit project content in `site/data/projects.json`
   - [x] Add/replace assets in `site/assets/docs/` and `site/assets/img/`
@@ -120,5 +122,9 @@ Task breakdown
   - [x] Update typography scale and uppercase section heading style
   - [x] Restyle project cards to bold dark-card visual blocks with numeric labels
   - [x] Keep existing profile content and accessibility structure functional
+- [x] UI-08: Refine Visual Style, Button System, and Typography Consistency
+  - [x] Review font pairing, size scale, and weight hierarchy across hero, sections, and cards
+  - [x] Improve button styles, states, spacing, and consistency for primary and secondary actions
+  - [x] Polish color usage, contrast, and spacing for a more cohesive final visual pass
 - [x] DOC-05: Update planning and task tracking for redesign cycle
 - [ ] REL-01: Commit and Push Redesign Cycle Changes
