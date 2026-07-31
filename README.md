@@ -29,7 +29,7 @@ The goal is to provide a professional, fast, and accessible presentation site wi
 ### Backend
 
 - No backend server for phase 1
-- Contact via `mailto:` link
+- Contact form prepares a `mailto:` message in the visitor's email client
 - Optional phase-2 serverless form endpoint (future scope)
 
 ### Testing and Delivery
@@ -49,6 +49,7 @@ The goal is to provide a professional, fast, and accessible presentation site wi
 ├─ package.json
 ├─ playwright.config.ts
 ├─ site/
+│  ├─ contact.html
 │  ├─ index.html
 │  ├─ assets/
 │  │  ├─ css/styles.css
@@ -121,8 +122,10 @@ npm run test:e2e
 
 ## Current placeholders
 
-- Resume placeholder is at `site/assets/docs/resume-placeholder.txt`.
-- Replace it with `site/assets/docs/resume.pdf` when final resume is ready.
+- Resume placeholder is at `site/assets/docs/resume-placeholder.txt`; the profile page
+  supplies a named download for the current asset.
+- Replace it with `site/assets/docs/resume.pdf` and update the download filename when
+  the final resume is ready.
 - Add final project/profile images under `site/assets/img/`.
 
 ## Content update workflow
@@ -138,6 +141,7 @@ npm run test:e2e
 
 - Home page loads and title is correct.
 - All key sections are visible and reachable from navigation.
+- Dedicated contact page loads and validates the message form.
 - Contact details render correctly from JSON (email, phone, location, LinkedIn).
 - Mobile menu toggle works on narrow screens.
 - Resume download link is present and reachable.

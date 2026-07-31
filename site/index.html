@@ -21,10 +21,13 @@
         </div>
       </div>
       <div class="container header-row">
-        <a class="brand" href="#about" aria-label="Homepage">
-          <span class="brand-mark">| | |</span>
-          <span class="brand-name">SAT</span>
-        </a>
+      <a class="brand" href="#about" aria-label="Santiago Arredondo Torres homepage">
+        <span class="brand-mark" aria-hidden="true">SA</span>
+        <span class="brand-copy">
+          <span class="brand-name">Santiago Arredondo</span>
+          <span class="brand-role">Software Engineer</span>
+        </span>
+      </a>
         <button
           id="menu-toggle"
           class="menu-toggle"
@@ -42,7 +45,7 @@
         <a href="#education">Education</a>
         <a href="#certifications">Certifications</a>
         <a href="#languages">Languages</a>
-        <a href="#contact">Contact</a>
+        <a href="./contact.html">Contact</a>
         <a href="#resume">Resume</a>
       </nav>
     </header>
@@ -94,20 +97,29 @@
 
       <section id="contact" aria-labelledby="contact-title">
         <h2 id="contact-title">Contact</h2>
+        <p class="section-kicker">Have a project or opportunity in mind?</p>
         <ul>
           <li><a id="email-link" href="mailto:santiarrto@gmail.com">Email</a></li>
-          <li><span id="phone-text">Phone</span></li>
+          <li><a id="github-link" href="#" rel="noopener noreferrer">GitHub</a></li>
           <li><span id="location-text">Location</span></li>
           <li>
             <a id="linkedin-link" href="#" rel="noopener noreferrer">LinkedIn</a>
           </li>
         </ul>
+        <p class="section-action">
+          <a class="secondary-cta" href="./contact.html">Send a message</a>
+        </p>
       </section>
 
       <section id="resume" aria-labelledby="resume-title">
         <h2 id="resume-title">Resume</h2>
         <p>
-          <a class="secondary-cta" href="./assets/docs/resume-placeholder.txt" download>
+          <a
+            class="secondary-cta"
+            href="./assets/docs/resume-placeholder.txt"
+            download
+            data-resume-download
+          >
             Download resume
           </a>
         </p>

@@ -22,4 +22,30 @@ test("loads profile page and primary sections", async ({ page }) => {
   }
 
   await expect(page.locator("#projects-list .card")).toHaveCount(2);
+  await expect(page.getByRole("link", { name: "Contact" })).toBeVisible();
+  await expect(page.locator("[data-resume-download]")).toHaveAttribute("download", "");
+});
+
+test("loads the dedicated contact page and exposes an accessible form", async ({ page }) => {
+  await page.goto("/contact.html");
+
+  await expect(page).toHaveTitle(/Contact/);
+  await expect(page.getByRole("heading", { level: 1 })).toContainText(
+    "Let's build something useful."
+  );
+  await expect(page.getByRole("form")).toBeVisible();
+  await expect(page.getByLabel("Name")).toHaveAttribute("required", "");
+  await expect(page.getByLabel("Email")).toHaveAttribute("type", "email");
+  await expect(page.getByRole("textbox", { name: "Message" })).toHaveAttribute(
+    "required",
+    ""
+  );
+  await expect(page.getByRole("link", { name: "LinkedIn" })).toHaveAttribute(
+    "rel",
+    "noopener noreferrer"
+  );
+  await expect(page.getByRole("link", { name: "GitHub" })).toHaveAttribute(
+    "href",
+    "https://github.com/santiarrto"
+  );
 });

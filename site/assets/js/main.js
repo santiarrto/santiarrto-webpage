@@ -14,14 +14,42 @@ async function loadData() {
 }
 
 function renderProfile(profile) {
-  document.getElementById("about-summary").textContent = profile.summary;
-  document.getElementById("hero-role").textContent = profile.title;
-  document.getElementById("email-link").href = `mailto:${profile.contact.email}`;
-  document.getElementById("email-link").textContent = profile.contact.email;
-  document.getElementById("phone-text").textContent = profile.contact.phone;
-  document.getElementById("location-text").textContent = profile.contact.location;
-  document.getElementById("linkedin-link").href = profile.contact.linkedin;
-  document.getElementById("linkedin-link").textContent = "LinkedIn";
+  const aboutSummary = document.getElementById("about-summary");
+  if (aboutSummary) {
+    aboutSummary.textContent = profile.summary;
+  }
+
+  const heroRole = document.getElementById("hero-role");
+  if (heroRole) {
+    heroRole.textContent = profile.title;
+  }
+
+  const emailLink = document.getElementById("email-link");
+  if (emailLink) {
+    emailLink.href = `mailto:${profile.contact.email}`;
+    emailLink.textContent = profile.contact.email;
+  }
+
+  const githubLink = document.getElementById("github-link");
+  if (githubLink) {
+    githubLink.href = profile.contact.github;
+    githubLink.textContent = "GitHub";
+  }
+
+  const locationText = document.getElementById("location-text");
+  if (locationText) {
+    locationText.textContent = profile.contact.location;
+  }
+
+  const linkedinLink = document.getElementById("linkedin-link");
+  if (linkedinLink) {
+    linkedinLink.href = profile.contact.linkedin;
+    linkedinLink.textContent = "LinkedIn";
+  }
+
+  if (!document.getElementById("skills-list")) {
+    return;
+  }
 
   const skillsList = document.getElementById("skills-list");
   skillsList.innerHTML = profile.technologies
@@ -42,10 +70,12 @@ function renderProfile(profile) {
   experienceList.innerHTML = profile.experience
     .map((item) => {
       const highlights = Array.isArray(item.highlights)
-        ? `<ul>${item.highlights.map((h) => `<li>${h}</li>`).join("")}</ul>`
+        ? `<ul class="timeline-highlights">${item.highlights
+            .map((h) => `<li>${h}</li>`)
+            .join("")}</ul>`
         : "";
       const summary = item.summary ? `<p>${item.summary}</p>` : "";
-      return `<li><strong>${item.role}</strong> — ${item.company} (${item.period})${summary}${highlights}</li>`;
+      return `<li><div class="timeline-meta">${item.period}</div><h3>${item.role}</h3><p class="timeline-company">${item.company}</p>${summary}${highlights}</li>`;
     })
     .join("");
 
@@ -53,13 +83,16 @@ function renderProfile(profile) {
   educationList.innerHTML = profile.education
     .map(
       (item) =>
-        `<li><strong>${item.institution}</strong> — ${item.program} (${item.period})</li>`
+        `<li><div class="timeline-meta">${item.period}</div><h3>${item.program}</h3><p class="timeline-company">${item.institution}</p></li>`
     )
     .join("");
 
   const certificationsList = document.getElementById("certifications-list");
   certificationsList.innerHTML = profile.certifications
-    .map((item) => `<li><strong>${item.name}</strong> — ${item.issuer} (${item.issued})</li>`)
+    .map(
+      (item) =>
+        `<li><div class="timeline-meta">${item.issued}</div><h3>${item.name}</h3><p class="timeline-company">${item.issuer}</p></li>`
+    )
     .join("");
 }
 
@@ -69,10 +102,10 @@ function renderProjects(projects) {
     .map(
       (project, index) => `
       <article class="card">
-        <p><strong>${String(index + 1).padStart(2, "0")}</strong></p>
+        <p class="card-index">${String(index + 1).padStart(2, "0")}</p>
         <h3>${project.name}</h3>
-        <p>${project.summary}</p>
-        <p><strong>Stack:</strong> ${project.technologies.join(", ")}</p>
+        <p class="card-summary">${project.summary}</p>
+        <p class="card-stack"><strong>Stack:</strong> ${project.technologies.join(", ")}</p>
         <p><a class="secondary-cta" href="${project.url}" target="_blank" rel="noopener noreferrer">View project</a></p>
       </article>
     `
@@ -90,6 +123,34 @@ function wireMenu() {
   });
 }
 
+function wireContactForm(email) {
+  const form = document.getElementById("contact-form");
+  const status = document.getElementById("contact-status");
+  if (!form || !status) {
+    return;
+  }
+
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
+
+    const formData = new FormData(form);
+    const name = String(formData.get("name")).trim();
+    const senderEmail = String(formData.get("email")).trim();
+    const message = String(formData.get("message")).trim();
+    const subject = `Website contact from ${name}`;
+    const body = `Name: ${name}\nEmail: ${senderEmail}\n\n${message}`;
+
+    status.textContent = "Opening your email client...";
+    window.location.href = `mailto:${email}?subject=${encodeURIComponent(
+      subject
+    )}&body=${encodeURIComponent(body)}`;
+  });
+}
+
 async function init() {
   wireMenu();
   document.getElementById("year").textContent = String(new Date().getFullYear());
@@ -97,10 +158,15 @@ async function init() {
   try {
     const { profile, projects } = await loadData();
     renderProfile(profile);
-    renderProjects(projects);
+    if (document.getElementById("projects-list")) {
+      renderProjects(projects);
+    }
+    wireContactForm(profile.contact.email);
   } catch (error) {
-    document.getElementById("about-summary").textContent =
-      "Profile content is currently unavailable.";
+    const aboutSummary = document.getElementById("about-summary");
+    if (aboutSummary) {
+      aboutSummary.textContent = "Profile content is currently unavailable.";
+    }
     throw error;
   }
 }
