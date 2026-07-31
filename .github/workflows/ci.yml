@@ -3,7 +3,7 @@ name: CI and Pages
 on:
   pull_request:
   push:
-    branches: ["main"]
+    branches: ["main", "master"]
 
 permissions:
   contents: read
@@ -37,7 +37,7 @@ jobs:
         run: npm run test:e2e
 
   deploy:
-    if: github.ref == 'refs/heads/main'
+    if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
     needs: test
     runs-on: ubuntu-latest
     environment:
