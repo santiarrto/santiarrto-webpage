@@ -593,6 +593,12 @@ h3 {
   text-decoration: none;
 }
 
+#contact .section-action .secondary-cta,
+#contact .section-action .secondary-cta:hover,
+#contact .section-action .secondary-cta:focus-visible {
+  color: #fff;
+}
+
 .section-action {
   margin: 1rem 0 0;
 }
