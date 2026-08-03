@@ -178,7 +178,7 @@ function renderProjects(projects) {
         <h3>${project.name}</h3>
         <p class="card-summary">${project.summary}</p>
         <p class="card-stack"><strong>${dictionary.stack}</strong> ${project.technologies.join(", ")}</p>
-        <p><a class="secondary-cta" href="${project.url}" target="_blank" rel="noopener noreferrer">${dictionary.viewProject}</a></p>
+        <p><a class="secondary-cta" href="${project.url}" target="_blank" rel="noopener noreferrer"><span class="cta-icon" aria-hidden="true">↗</span><span>${dictionary.viewProject}</span></a></p>
       </article>
     `
     )

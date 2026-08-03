@@ -23,6 +23,10 @@ test("loads profile page and primary sections", async ({ page }) => {
 
   await expect(page.locator("#projects-list .card")).toHaveCount(2);
   await expect(page.getByRole("link", { name: "Contact" })).toBeVisible();
+  await expect(page.locator(".brand-mark img")).toHaveAttribute(
+    "src",
+    "./assets/img/face.jpg"
+  );
   const resumeDownload = page.locator("[data-resume-download]");
   await expect(resumeDownload).toHaveAttribute("download", "");
   await expect(resumeDownload).toHaveAttribute(

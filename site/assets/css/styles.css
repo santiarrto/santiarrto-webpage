@@ -115,18 +115,27 @@ button {
 }
 
 .brand-mark {
-  display: grid;
+  position: relative;
+  display: block;
+  overflow: hidden;
   flex: 0 0 2.3rem;
   width: 2.3rem;
   height: 2.3rem;
-  place-items: center;
+  aspect-ratio: 1;
   border: 1px solid rgba(255, 255, 255, 0.65);
-  border-radius: 10px;
+  border-radius: 8px;
   background: rgba(31, 32, 36, 0.18);
-  font-family: var(--font-display);
-  font-size: 0.76rem;
-  font-weight: 800;
-  letter-spacing: 0.04em;
+}
+
+.brand-mark img {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
 }
 
 .brand-copy {
@@ -272,7 +281,7 @@ button {
   color: #fff;
   background:
     linear-gradient(rgba(16, 18, 23, 0.4), rgba(16, 18, 23, 0.78)),
-    radial-gradient(circle at 25% 18%, #7d8c93 0%, #58636c 34%, #2d353e 100%);
+    url("../img/background.png") center / cover no-repeat;
   min-height: 470px;
   display: flex;
   align-items: center;
@@ -352,6 +361,24 @@ h1 {
     border-color 160ms ease,
     transform 160ms ease,
     box-shadow 160ms ease;
+}
+
+.cta-icon {
+  display: inline-grid;
+  width: 1.1rem;
+  height: 1.1rem;
+  place-items: center;
+  flex: 0 0 1.1rem;
+  border-radius: 50%;
+  background: rgba(31, 32, 36, 0.12);
+  color: currentColor;
+  font-size: 0.92rem;
+  line-height: 1;
+  text-transform: none;
+}
+
+.secondary-cta .cta-icon {
+  background: rgba(255, 255, 255, 0.2);
 }
 
 .primary-cta {
