@@ -23,11 +23,20 @@ test("loads profile page and primary sections", async ({ page }) => {
 
   await expect(page.locator("#projects-list .card")).toHaveCount(2);
   await expect(page.getByRole("link", { name: "Contact" })).toBeVisible();
-  await expect(page.locator("[data-resume-download]")).toHaveAttribute("download", "");
+  const resumeDownload = page.locator("[data-resume-download]");
+  await expect(resumeDownload).toHaveAttribute("download", "");
+  await expect(resumeDownload).toHaveAttribute(
+    "href",
+    "./assets/docs/Santiago%20Arredondo%20CV%20English.pdf"
+  );
   await page.getByRole("button", { name: "Cambiar la página a español" }).click();
   await expect(page.locator("html")).toHaveAttribute("lang", "es");
   await expect(page.locator("#about-title")).toContainText(
     "Construyo experiencias digitales confiables"
+  );
+  await expect(resumeDownload).toHaveAttribute(
+    "href",
+    "./assets/docs/Santiago%20Arredondo%20CV%20Spanish.pdf"
   );
   await page.getByRole("button", { name: "Switch page to English" }).click();
   await expect(page.locator("html")).toHaveAttribute("lang", "en");

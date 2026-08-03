@@ -36,6 +36,18 @@ const spanishProfile = {
   summary: "Ingeniero de software con más de 6 años de experiencia creando aplicaciones confiables, flujos de datos y automatización de servicios en entornos bancarios, de medios y empresariales.",
 };
 
+const resumeFiles = {
+  en: "./assets/docs/Santiago%20Arredondo%20CV%20English.pdf",
+  es: "./assets/docs/Santiago%20Arredondo%20CV%20Spanish.pdf",
+};
+
+function applyResumeDownload(language) {
+  const resumeLink = document.querySelector("[data-resume-download]");
+  if (resumeLink) {
+    resumeLink.href = resumeFiles[language];
+  }
+}
+
 function applyTranslations(language) {
   const dictionary = translations[language];
   document.documentElement.lang = language;
@@ -50,6 +62,7 @@ function applyTranslations(language) {
       option.classList.toggle("is-active", option.dataset.languageOption === language);
     });
   }
+  applyResumeDownload(language);
 }
 
 async function loadData() {

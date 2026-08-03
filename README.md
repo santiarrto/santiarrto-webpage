@@ -120,12 +120,10 @@ Run tests:
 npm run test:e2e
 ```
 
-## Current placeholders
+## Resume downloads
 
-- Resume placeholder is at `site/assets/docs/resume-placeholder.txt`; the profile page
-  supplies a named download for the current asset.
-- Replace it with `site/assets/docs/resume.pdf` and update the download filename when
-  the final resume is ready.
+- English and Spanish resumes are stored in `site/assets/docs/`.
+- The profile page automatically downloads the resume matching the selected language.
 - Add final project/profile images under `site/assets/img/`.
 
 ## Content update workflow
