@@ -24,6 +24,13 @@ test("loads profile page and primary sections", async ({ page }) => {
   await expect(page.locator("#projects-list .card")).toHaveCount(2);
   await expect(page.getByRole("link", { name: "Contact" })).toBeVisible();
   await expect(page.locator("[data-resume-download]")).toHaveAttribute("download", "");
+  await page.getByRole("button", { name: "Cambiar la página a español" }).click();
+  await expect(page.locator("html")).toHaveAttribute("lang", "es");
+  await expect(page.locator("#about-title")).toContainText(
+    "Construyo experiencias digitales confiables"
+  );
+  await page.getByRole("button", { name: "Switch page to English" }).click();
+  await expect(page.locator("html")).toHaveAttribute("lang", "en");
 });
 
 test("loads the dedicated contact page and exposes an accessible form", async ({ page }) => {

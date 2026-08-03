@@ -51,6 +51,7 @@ Task breakdown
 - [x] UI-05: Add Interaction Enhancements (`site/assets/js/main.js`)
 - [x] UI-06: Optimize Image and Typography Rendering
 - [x] UI-09: Refine visual polish, CTA buttons, and typography system
+- [x] UI-10: Add English/Spanish Translation Toggle
 
 2) Backend (phase 1 static-first)
 
@@ -66,9 +67,10 @@ Task breakdown
   - [x] Verify page loads and all main sections render (About, Skills, Projects, Experience, Education, Certifications, Languages, Contact, Resume)
   - [x] Verify nav anchors scroll to expected sections
   - [x] Verify responsive behavior on mobile width (menu toggle works and content is readable)
-  - [x] Verify contact data is rendered from `profile.json` (email, phone, location, LinkedIn)
+  - [x] Verify contact data is rendered from `profile.json` (email, GitHub, location, LinkedIn)
   - [x] Verify external links open safely (`rel="noopener noreferrer"`)
   - [x] Verify resume download link is present and responds
+  - [x] Verify the language toggle switches page content between English and Spanish
 
 4) Content
 

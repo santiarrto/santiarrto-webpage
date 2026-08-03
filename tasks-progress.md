@@ -2,9 +2,9 @@ Tasks Progress — Profile Website
 
 Summary
 
-- Total tasks: 32
+- Total tasks: 33
 - In progress: 0
-- Done: 30
+- Done: 31
 - Blocked: 1
 
 Progress board by workstream
@@ -28,6 +28,7 @@ UI/UX — To Do
 - [x] UI-06: Optimize Image and Typography Rendering
 - [x] UI-07: Redesign Layout, Typography, and Color System to Match Reference Style
 - [x] UI-08: Refine Visual Style, Button System, and Typography Consistency
+- [x] UI-10: Add English/Spanish Translation Toggle
 
 Backend — To Do
 
@@ -106,6 +107,7 @@ Done
 - [x] DOC-05: Update planning and task tracking for redesign cycle
 - [x] DOC-06: Refresh planning and task tracking after the visual polish and content alignment pass
 - [x] OPS-01: Remove Legacy Unused Folders
+- [x] UI-10: Add English/Spanish Translation Toggle
 
 Blocked
 

@@ -166,6 +166,24 @@ button {
   transition: background-color 160ms ease, transform 160ms ease;
 }
 
+.language-toggle {
+  margin-left: auto;
+  margin-right: 0.55rem;
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  border-radius: 999px;
+  padding: 0.35rem 0.7rem;
+  color: #fff;
+  background: rgba(31, 32, 36, 0.18);
+  font: 700 0.7rem var(--font-display);
+  letter-spacing: 0.04em;
+  cursor: pointer;
+}
+
+.language-toggle:hover,
+.language-toggle:focus-visible {
+  background: rgba(255, 255, 255, 0.16);
+}
+
 .menu-toggle:hover,
 .menu-toggle:focus-visible {
   background: rgba(255, 255, 255, 0.12);
@@ -761,6 +779,10 @@ h3 {
 }
 
 @media (max-width: 767px) {
+  .language-toggle {
+    margin-left: auto;
+  }
+
   .hero-content {
     padding: 3.4rem 0;
   }

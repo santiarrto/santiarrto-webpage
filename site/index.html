@@ -28,7 +28,10 @@
           <span class="brand-role">Software Engineer</span>
         </span>
       </a>
-        <button
+      <button id="language-toggle" class="language-toggle" type="button" aria-pressed="false">
+        Español
+      </button>
+      <button
           id="menu-toggle"
           class="menu-toggle"
           aria-expanded="false"
@@ -38,15 +41,15 @@
         </button>
       </div>
       <nav id="primary-nav" class="primary-nav container" aria-label="Primary">
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#experience">Experience</a>
-        <a href="#education">Education</a>
-        <a href="#certifications">Certifications</a>
-        <a href="#languages">Languages</a>
-        <a href="./contact.html">Contact</a>
-        <a href="#resume">Resume</a>
+        <a href="#about" data-i18n="about">About</a>
+        <a href="#skills" data-i18n="skills">Skills</a>
+        <a href="#projects" data-i18n="projects">Projects</a>
+        <a href="#experience" data-i18n="experience">Experience</a>
+        <a href="#education" data-i18n="education">Education</a>
+        <a href="#certifications" data-i18n="certifications">Certifications</a>
+        <a href="#languages" data-i18n="languages">Languages</a>
+        <a href="./contact.html" data-i18n="contact">Contact</a>
+        <a href="#resume" data-i18n="resume">Resume</a>
       </nav>
     </header>
 
@@ -54,50 +57,50 @@
       <div class="container hero-content">
         <p class="eyebrow" id="hero-role">Loading role...</p>
         <h1 id="site-title">Santiago Arredondo Torres</h1>
-        <h2 id="about-title">Building reliable digital experiences</h2>
+        <h2 id="about-title" data-i18n="heroTitle">Building reliable digital experiences</h2>
         <p id="about-summary">Loading profile summary...</p>
-        <a class="primary-cta" href="#experience">View Experience</a>
+        <a class="primary-cta" href="#experience" data-i18n="viewExperience">View Experience</a>
       </div>
     </section>
 
     <main id="main-content" class="container content-shell">
       <section id="skills" aria-labelledby="skills-title">
-        <h2 id="skills-title">Technologies</h2>
-        <p class="section-kicker">Core tools for software delivery</p>
+        <h2 id="skills-title" data-i18n="technologies">Technologies</h2>
+        <p class="section-kicker" data-i18n="technologyKicker">Core tools for software delivery</p>
         <ul id="skills-list" class="tag-list" aria-live="polite"></ul>
-        <h3>Soft skills</h3>
+        <h3 data-i18n="softSkills">Soft skills</h3>
         <ul id="soft-skills-list" class="tag-list" aria-live="polite"></ul>
       </section>
 
       <section id="projects" aria-labelledby="projects-title">
-        <h2 id="projects-title">Featured projects</h2>
-        <p class="section-kicker">Ways I create value through engineering</p>
+        <h2 id="projects-title" data-i18n="featuredProjects">Featured projects</h2>
+        <p class="section-kicker" data-i18n="projectsKicker">Ways I create value through engineering</p>
         <div id="projects-list" class="cards" aria-live="polite"></div>
       </section>
 
       <section id="experience" aria-labelledby="experience-title">
-        <h2 id="experience-title">Experience</h2>
+        <h2 id="experience-title" data-i18n="experience">Experience</h2>
         <ul id="experience-list" class="timeline" aria-live="polite"></ul>
       </section>
 
       <section id="education" aria-labelledby="education-title">
-        <h2 id="education-title">Education</h2>
+        <h2 id="education-title" data-i18n="education">Education</h2>
         <ul id="education-list" class="timeline" aria-live="polite"></ul>
       </section>
 
       <section id="certifications" aria-labelledby="certifications-title">
-        <h2 id="certifications-title">Certifications</h2>
+        <h2 id="certifications-title" data-i18n="certifications">Certifications</h2>
         <ul id="certifications-list" class="timeline" aria-live="polite"></ul>
       </section>
 
       <section id="languages" aria-labelledby="languages-title">
-        <h2 id="languages-title">Languages</h2>
+        <h2 id="languages-title" data-i18n="languages">Languages</h2>
         <ul id="languages-list" class="tag-list" aria-live="polite"></ul>
       </section>
 
       <section id="contact" aria-labelledby="contact-title">
-        <h2 id="contact-title">Contact</h2>
-        <p class="section-kicker">Have a project or opportunity in mind?</p>
+        <h2 id="contact-title" data-i18n="contact">Contact</h2>
+        <p class="section-kicker" data-i18n="contactKicker">Have a project or opportunity in mind?</p>
         <ul>
           <li><a id="email-link" href="mailto:santiarrto@gmail.com">Email</a></li>
           <li><a id="github-link" href="#" rel="noopener noreferrer">GitHub</a></li>
@@ -107,12 +110,12 @@
           </li>
         </ul>
         <p class="section-action">
-          <a class="secondary-cta" href="./contact.html">Send a message</a>
+          <a class="secondary-cta" href="./contact.html" data-i18n="sendMessage">Send a message</a>
         </p>
       </section>
 
       <section id="resume" aria-labelledby="resume-title">
-        <h2 id="resume-title">Resume</h2>
+        <h2 id="resume-title" data-i18n="resume">Resume</h2>
         <p>
           <a
             class="secondary-cta"
@@ -120,7 +123,7 @@
             download
             data-resume-download
           >
-            Download resume
+            <span data-i18n="downloadResume">Download resume</span>
           </a>
         </p>
       </section>

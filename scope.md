@@ -12,6 +12,7 @@ Selected sections
 - Experience
 - Contact
 - Resume download
+- English/Spanish language toggle
 
 Technology baseline
 
@@ -68,6 +69,7 @@ In scope
 - Implement accessible semantic structure and keyboard-friendly navigation.
 - Render projects and profile details from editable data files.
 - Add resume download link and contact links.
+- Add an accessible button to switch the profile and contact pages between English and Spanish.
 - Prepare baseline automated smoke and accessibility checks.
 - Deploy a static site through GitHub Pages.
 
@@ -97,6 +99,7 @@ Security, maintainability, and quality requirements
 Acceptance criteria
 
 - All selected sections are visible and correctly linked in navigation.
+- The language toggle switches visible page content between English and Spanish.
 - Site works on modern desktop and mobile browsers.
 - Content can be updated without changing core layout code.
 - Resume download and contact links are functional.
