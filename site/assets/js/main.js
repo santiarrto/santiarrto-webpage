@@ -44,9 +44,11 @@ function applyTranslations(language) {
   });
   const toggle = document.getElementById("language-toggle");
   if (toggle) {
-    toggle.textContent = dictionary.languageButton;
     toggle.setAttribute("aria-pressed", String(language === "es"));
     toggle.setAttribute("aria-label", language === "es" ? "Switch page to English" : "Cambiar la página a español");
+    toggle.querySelectorAll("[data-language-option]").forEach((option) => {
+      option.classList.toggle("is-active", option.dataset.languageOption === language);
+    });
   }
 }
 
