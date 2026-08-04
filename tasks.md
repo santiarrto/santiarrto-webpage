@@ -78,6 +78,10 @@ Task breakdown
 - [ ] CT-02: Create Projects Data File (`site/data/projects.json`)
 - [ ] CT-03: Add Resume PDF (`site/assets/docs/resume.pdf`)
 - [ ] CT-04: Add and Optimize Images (`site/assets/img/`)
+- [x] CT-06: Refresh Featured Projects Portfolio
+  - [x] Replace the Frontend Delivery Starter card with the football action monitor.
+  - [x] Add the New York City signal monitor as a project without an external link.
+  - [x] Add English and Spanish project copy and technology summaries.
 
 5) DevOps/Delivery
 

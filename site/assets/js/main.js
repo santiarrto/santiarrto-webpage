@@ -101,6 +101,11 @@ function renderProfile(profile) {
     emailLink.textContent = profile.contact.email;
   }
 
+  const directEmailLink = document.querySelector("[data-direct-email]");
+  if (directEmailLink) {
+    directEmailLink.href = `mailto:${profile.contact.email}`;
+  }
+
   const githubLink = document.getElementById("github-link");
   if (githubLink) {
     githubLink.href = profile.contact.github;
@@ -175,10 +180,14 @@ function renderProjects(projects) {
       (project, index) => `
       <article class="card">
         <p class="card-index">${String(index + 1).padStart(2, "0")}</p>
-        <h3>${project.name}</h3>
-        <p class="card-summary">${project.summary}</p>
+        <h3>${currentLanguage === "es" && project.nameEs ? project.nameEs : project.name}</h3>
+        <p class="card-summary">${currentLanguage === "es" && project.summaryEs ? project.summaryEs : project.summary}</p>
         <p class="card-stack"><strong>${dictionary.stack}</strong> ${project.technologies.join(", ")}</p>
-        <p><a class="secondary-cta" href="${project.url}" target="_blank" rel="noopener noreferrer"><span class="cta-icon" aria-hidden="true">↗</span><span>${dictionary.viewProject}</span></a></p>
+        ${
+          project.url
+            ? `<p><a class="secondary-cta" href="${project.url}" target="_blank" rel="noopener noreferrer"><span class="cta-icon" aria-hidden="true">↗</span><span>${dictionary.viewProject}</span></a></p>`
+            : ""
+        }
       </article>
     `
     )
@@ -202,6 +211,7 @@ function wireContactForm(email) {
     return;
   }
 
+  form.action = `mailto:${email}`;
   form.addEventListener("submit", (event) => {
     event.preventDefault();
     if (!form.checkValidity()) {

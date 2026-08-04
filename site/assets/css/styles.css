@@ -692,7 +692,9 @@ h3 {
 }
 
 .contact-intro {
-  background: var(--accent-dark);
+  background:
+    linear-gradient(rgba(31, 32, 36, 0.68), rgba(31, 32, 36, 0.82)),
+    url("../img/background%20contact%20us.png") center / cover no-repeat;
   color: #fff;
   border-color: var(--accent-dark);
 }

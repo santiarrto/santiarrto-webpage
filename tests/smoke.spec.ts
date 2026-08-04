@@ -21,7 +21,8 @@ test("loads profile page and primary sections", async ({ page }) => {
     await expect(page.locator(`#${id}`)).toBeVisible();
   }
 
-  await expect(page.locator("#projects-list .card")).toHaveCount(2);
+  await expect(page.locator("#projects-list .card")).toHaveCount(3);
+  await expect(page.locator("#projects-list .card .secondary-cta")).toHaveCount(1);
   await expect(page.getByRole("link", { name: "Contact" })).toBeVisible();
   await expect(page.locator(".brand-mark img")).toHaveAttribute(
     "src",
@@ -37,6 +38,9 @@ test("loads profile page and primary sections", async ({ page }) => {
   await expect(page.locator("html")).toHaveAttribute("lang", "es");
   await expect(page.locator("#about-title")).toContainText(
     "Construyo experiencias digitales confiables"
+  );
+  await expect(page.locator("#projects-list .card").nth(1)).toContainText(
+    "Monitor de acciones en partidos de fútbol"
   );
   await expect(resumeDownload).toHaveAttribute(
     "href",
@@ -60,9 +64,21 @@ test("loads the dedicated contact page and exposes an accessible form", async ({
     "required",
     ""
   );
+  await expect(page.locator("#contact-form")).toHaveAttribute(
+    "action",
+    "mailto:santiarrto@gmail.com"
+  );
+  await expect(page.getByRole("link", { name: "Email directly" })).toHaveAttribute(
+    "href",
+    "mailto:santiarrto@gmail.com"
+  );
   await expect(page.getByRole("link", { name: "LinkedIn" })).toHaveAttribute(
     "rel",
     "noopener noreferrer"
+  );
+  await expect(page.getByRole("link", { name: "LinkedIn" })).toHaveAttribute(
+    "href",
+    "https://www.linkedin.com/in/santiago-arredondo-torres-b8811616a/"
   );
   await expect(page.getByRole("link", { name: "GitHub" })).toHaveAttribute(
     "href",

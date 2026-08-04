@@ -2,9 +2,9 @@ Tasks Progress — Profile Website
 
 Summary
 
-- Total tasks: 33
+- Total tasks: 34
 - In progress: 0
-- Done: 31
+- Done: 32
 - Blocked: 1
 
 Progress board by workstream
@@ -49,6 +49,7 @@ Content — To Do
 - [x] CT-03: Add Resume PDF (`site/assets/docs/resume.pdf`)
 - [x] CT-04: Add and Optimize Images (`site/assets/img/`)
 - [x] CT-05: Synchronize Profile Content from Provided CV/LinkedIn Images
+- [x] CT-06: Refresh Featured Projects Portfolio
 
 DevOps/Delivery — To Do
 
@@ -108,6 +109,7 @@ Done
 - [x] DOC-06: Refresh planning and task tracking after the visual polish and content alignment pass
 - [x] OPS-01: Remove Legacy Unused Folders
 - [x] UI-10: Add English/Spanish Translation Toggle
+- [x] CT-06: Refresh Featured Projects Portfolio
 
 Blocked
 
