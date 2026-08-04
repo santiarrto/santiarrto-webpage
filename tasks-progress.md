@@ -2,9 +2,9 @@ Tasks Progress — Profile Website
 
 Summary
 
-- Total tasks: 34
+- Total tasks: 35
 - In progress: 0
-- Done: 32
+- Done: 33
 - Blocked: 1
 
 Progress board by workstream
@@ -29,6 +29,7 @@ UI/UX — To Do
 - [x] UI-07: Redesign Layout, Typography, and Color System to Match Reference Style
 - [x] UI-08: Refine Visual Style, Button System, and Typography Consistency
 - [x] UI-10: Add English/Spanish Translation Toggle
+- [x] UI-11: Translate and Auto-Hide Last Update Announcement
 
 Backend — To Do
 

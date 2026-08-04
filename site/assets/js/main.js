@@ -12,7 +12,8 @@ const translations = {
     name: "Name", email: "Email", message: "Message", openEmail: "Open email",
     emailDirectly: "Email directly", otherWays: "Other ways to connect",
     languageButton: "Español", openingEmail: "Opening your email client...",
-    stack: "Stack:", viewProject: "View project",
+    stack: "Stack:", viewProject: "View project", lastUpdatedLabel: "Last update",
+    lastUpdatedDate: "August 3, 2026",
   },
   es: {
     about: "Sobre mí", skills: "Habilidades", projects: "Proyectos", experience: "Experiencia",
@@ -27,7 +28,8 @@ const translations = {
     name: "Nombre", email: "Correo electrónico", message: "Mensaje", openEmail: "Abrir correo",
     emailDirectly: "Enviar correo directamente", otherWays: "Otras formas de contacto",
     languageButton: "English", openingEmail: "Abriendo tu cliente de correo...",
-    stack: "Tecnologías:", viewProject: "Ver proyecto",
+    stack: "Tecnologías:", viewProject: "Ver proyecto", lastUpdatedLabel: "Última actualización",
+    lastUpdatedDate: "3 de agosto de 2026",
   },
 };
 
@@ -46,6 +48,18 @@ function applyResumeDownload(language) {
   if (resumeLink) {
     resumeLink.href = resumeFiles[language];
   }
+}
+
+function wireAnnouncement() {
+  const announcement = document.querySelector(".announcement-bar");
+  if (!announcement) {
+    return;
+  }
+
+  window.setTimeout(() => {
+    announcement.classList.add("is-hidden");
+    announcement.setAttribute("aria-hidden", "true");
+  }, 5000);
 }
 
 function applyTranslations(language) {
@@ -244,6 +258,7 @@ async function init() {
     if (document.getElementById("projects-list")) {
       renderProjects(projects);
     }
+    wireAnnouncement();
     wireContactForm(profile.contact.email);
     const languageToggle = document.getElementById("language-toggle");
     if (languageToggle) {

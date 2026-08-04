@@ -7,6 +7,10 @@ test("loads profile page and primary sections", async ({ page }) => {
   await expect(page.getByRole("heading", { level: 1 })).toContainText(
     "Santiago Arredondo Torres"
   );
+  await expect(page.locator(".announcement-bar")).toContainText("Last update");
+  await expect(page.locator(".announcement-bar")).toHaveClass(/is-hidden/, {
+    timeout: 6000,
+  });
 
   const sectionIds = [
     "about",

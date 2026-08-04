@@ -52,6 +52,7 @@ Task breakdown
 - [x] UI-06: Optimize Image and Typography Rendering
 - [x] UI-09: Refine visual polish, CTA buttons, and typography system
 - [x] UI-10: Add English/Spanish Translation Toggle
+- [x] UI-11: Translate and Auto-Hide Last Update Announcement
 
 2) Backend (phase 1 static-first)
 
