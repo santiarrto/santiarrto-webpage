@@ -25,6 +25,17 @@ test("loads profile page and primary sections", async ({ page }) => {
     await expect(page.locator(`#${id}`)).toBeVisible();
   }
 
+  await expect(page.locator("#education-list li")).toHaveCount(4);
+  await expect(page.locator("#education-list")).toContainText("English B1+");
+  await expect(page.locator("#certifications-list li")).toHaveCount(11);
+  await expect(page.locator("#certifications-list")).toContainText("Data Engineer");
+  await expect(page.locator("#certifications-list")).toContainText(
+    "Azure Fundamentals Certificate"
+  );
+  await expect(page.locator("#certifications-list")).toContainText(
+    "Expires: May 2028"
+  );
+
   await expect(page.locator("#projects-list .card")).toHaveCount(3);
   await expect(page.locator("#projects-list .card .secondary-cta")).toHaveCount(1);
   await expect(page.getByRole("link", { name: "Contact" })).toBeVisible();
@@ -43,6 +54,7 @@ test("loads profile page and primary sections", async ({ page }) => {
   await expect(page.locator("#about-title")).toContainText(
     "Construyo experiencias digitales confiables"
   );
+  await expect(page.locator("#certifications-list")).toContainText("Vence: May 2028");
   await expect(page.locator("#projects-list .card").nth(1)).toContainText(
     "Monitor de acciones en partidos de fútbol"
   );

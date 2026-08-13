@@ -83,6 +83,12 @@ Task breakdown
   - [x] Replace the Frontend Delivery Starter card with the football action monitor.
   - [x] Add the New York City signal monitor as a project without an external link.
   - [x] Add English and Spanish project copy and technology summaries.
+- [x] CT-07: Add New Certifications to Certifications Section
+  - [x] Add Data Engineer certification from DataCamp (issued May 2026, expires May 2028).
+  - [x] Add Python Data Associate certification from DataCamp (issued April 2026, expires March 2028).
+  - [x] Add ChatGPT API for App Dev certification from O'Reilly (issued October 2025).
+  - [x] Add LLM Performance Engineering certification from O'Reilly (issued April 2025).
+  - [x] Move Azure Fundamentals into certifications and English courses into education.
 
 5) DevOps/Delivery
 

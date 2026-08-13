@@ -57,31 +57,53 @@
       "period": "2015 - 2019"
     },
     {
-      "institution": "Microsoft",
-      "program": "Azure Fundamentals Certificate",
-      "period": "2024"
-    },
-    {
       "institution": "Berlitz",
       "program": "English B2",
       "period": "2024"
+    },
+    {
+      "institution": "BBE Languages",
+      "program": "English B2",
+      "period": "2021"
+    },
+    {
+      "institution": "BBE Languages",
+      "program": "English B1+",
+      "period": "2020"
     }
   ],
   "certifications": [
     {
+      "name": "Data Engineer",
+      "issuer": "DataCamp",
+      "issued": "May 2026",
+      "expires": "May 2028"
+    },
+    {
+      "name": "Python Data Associate",
+      "issuer": "DataCamp",
+      "issued": "Apr 2026",
+      "expires": "Mar 2028"
+    },
+    {
+      "name": "ChatGPT API for App Dev",
+      "issuer": "O'Reilly",
+      "issued": "Oct 2025"
+    },
+    {
+      "name": "LLM Performance Engineering",
+      "issuer": "O'Reilly",
+      "issued": "Apr 2025"
+    },
+    {
+      "name": "Azure Fundamentals Certificate",
+      "issuer": "Microsoft",
+      "issued": "2024"
+    },
+    {
       "name": "Introduction to ChatGPT",
       "issuer": "DataCamp",
       "issued": "Apr 2023"
-    },
-    {
-      "name": "Ingles B2",
-      "issuer": "BBE Languages",
-      "issued": "Oct 2021"
-    },
-    {
-      "name": "Ingles B1+",
-      "issuer": "BBE Languages",
-      "issued": "Dec 2020"
     },
     {
       "name": "Scrum Foundation Professional Certificate",

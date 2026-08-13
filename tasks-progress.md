@@ -2,9 +2,9 @@ Tasks Progress — Profile Website
 
 Summary
 
-- Total tasks: 35
+- Total tasks: 36
 - In progress: 0
-- Done: 33
+- Done: 34
 - Blocked: 1
 
 Progress board by workstream
@@ -51,6 +51,7 @@ Content — To Do
 - [x] CT-04: Add and Optimize Images (`site/assets/img/`)
 - [x] CT-05: Synchronize Profile Content from Provided CV/LinkedIn Images
 - [x] CT-06: Refresh Featured Projects Portfolio
+- [x] CT-07: Add New Certifications to Certifications Section
 
 DevOps/Delivery — To Do
 

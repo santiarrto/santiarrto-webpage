@@ -13,7 +13,7 @@ const translations = {
     emailDirectly: "Email directly", otherWays: "Other ways to connect",
     languageButton: "Español", openingEmail: "Opening your email client...",
     stack: "Stack:", viewProject: "View project", lastUpdatedLabel: "Last update",
-    lastUpdatedDate: "August 3, 2026",
+    lastUpdatedDate: "August 13, 2026",
   },
   es: {
     about: "Sobre mí", skills: "Habilidades", projects: "Proyectos", experience: "Experiencia",
@@ -29,7 +29,7 @@ const translations = {
     emailDirectly: "Enviar correo directamente", otherWays: "Otras formas de contacto",
     languageButton: "English", openingEmail: "Abriendo tu cliente de correo...",
     stack: "Tecnologías:", viewProject: "Ver proyecto", lastUpdatedLabel: "Última actualización",
-    lastUpdatedDate: "3 de agosto de 2026",
+    lastUpdatedDate: "13 de agosto de 2026",
   },
 };
 
@@ -181,7 +181,7 @@ function renderProfile(profile) {
   certificationsList.innerHTML = profile.certifications
     .map(
       (item) =>
-        `<li><div class="timeline-meta">${item.issued}</div><h3>${item.name}</h3><p class="timeline-company">${item.issuer}</p></li>`
+        `<li><div class="timeline-meta">${item.issued}${item.expires ? ` · ${currentLanguage === "es" ? "Vence" : "Expires"}: ${item.expires}` : ""}</div><h3>${item.name}</h3><p class="timeline-company">${item.issuer}</p></li>`
     )
     .join("");
 }
