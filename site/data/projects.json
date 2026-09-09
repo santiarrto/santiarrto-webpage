@@ -5,6 +5,7 @@
     "summary": "Static, accessible profile site with JSON-driven content and CI validation.",
     "summaryEs": "Sitio de perfil estático y accesible, impulsado por datos JSON y validado continuamente con CI.",
     "technologies": ["HTML5", "CSS3", "JavaScript", "GitHub Actions"],
+    "technologiesEs": ["HTML5", "CSS3", "JavaScript", "GitHub Actions"],
     "url": "https://github.com/santiarrto/santiarrto-webpage"
   },
   {
@@ -12,13 +13,15 @@
     "nameEs": "Monitor de acciones en partidos de fútbol",
     "summary": "A hackathon-built real-time experience that combines FastAPI, Python, and GPT to interpret live match streams, describe key plays, identify the player in possession, and surface context as the game unfolds.",
     "summaryEs": "Aplicación desarrollada para un hackathon que combina FastAPI, Python y GPT para interpretar un stream en vivo, describir jugadas, identificar al jugador en posesión y mostrar contexto mientras ocurre el partido.",
-    "technologies": ["FastAPI", "Python", "GPT API", "Real-time streaming"]
+    "technologies": ["FastAPI", "Python", "GPT API", "Real-time streaming"],
+    "technologiesEs": ["FastAPI", "Python", "API de GPT", "Streaming en tiempo real"]
   },
   {
     "name": "New York City Signal Monitor",
     "nameEs": "Monitor de señales de la ciudad de Nueva York",
     "summary": "An urban intelligence concept that uses Codex, Python, OpenStreetMap, and MongoDB to combine weather, live events, and traffic signals into a clearer view of the city—helping people make faster, better-informed decisions.",
     "summaryEs": "Concepto de inteligencia urbana que usa Codex, Python, OpenStreetMap y MongoDB para combinar clima, eventos en tiempo real y tráfico en una vista clara de la ciudad, ayudando a tomar decisiones más rápidas e informadas.",
-    "technologies": ["Codex", "Python", "OpenStreetMap", "MongoDB", "Real-time data"]
+    "technologies": ["Codex", "Python", "OpenStreetMap", "MongoDB", "Real-time data"],
+    "technologiesEs": ["Codex", "Python", "OpenStreetMap", "MongoDB", "Datos en tiempo real"]
   }
 ]

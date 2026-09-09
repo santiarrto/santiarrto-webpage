@@ -13,7 +13,14 @@ const translations = {
     emailDirectly: "Email directly", otherWays: "Other ways to connect",
     languageButton: "Español", openingEmail: "Opening your email client...",
     stack: "Stack:", viewProject: "View project", lastUpdatedLabel: "Last update",
-    lastUpdatedDate: "August 13, 2026",
+    lastUpdatedDate: "September 9, 2026", skipToContent: "Skip to content",
+    softwareEngineer: "Software Engineer", menu: "Menu", primaryNav: "Primary",
+    homepageLabel: "Santiago Arredondo Torres homepage", location: "Location",
+    copyright: "©", languageToggle: "Cambiar la página a español",
+    pageTitle: "Santiago Arredondo Torres | Software Engineer",
+    contactPageTitle: "Contact | Santiago Arredondo Torres",
+    homeDescription: "Profile website for Santiago Arredondo Torres, Software Engineer.",
+    contactDescription: "Contact Santiago Arredondo Torres, Software Engineer.",
   },
   es: {
     about: "Sobre mí", skills: "Habilidades", projects: "Proyectos", experience: "Experiencia",
@@ -29,7 +36,14 @@ const translations = {
     emailDirectly: "Enviar correo directamente", otherWays: "Otras formas de contacto",
     languageButton: "English", openingEmail: "Abriendo tu cliente de correo...",
     stack: "Tecnologías:", viewProject: "Ver proyecto", lastUpdatedLabel: "Última actualización",
-    lastUpdatedDate: "13 de agosto de 2026",
+    lastUpdatedDate: "9 de septiembre de 2026", skipToContent: "Saltar al contenido",
+    softwareEngineer: "Ingeniero de software", menu: "Menú", primaryNav: "Principal",
+    homepageLabel: "Página principal de Santiago Arredondo Torres", location: "Ubicación",
+    copyright: "©", languageToggle: "Cambiar la página a inglés",
+    pageTitle: "Santiago Arredondo Torres | Ingeniero de software",
+    contactPageTitle: "Contacto | Santiago Arredondo Torres",
+    homeDescription: "Sitio web de perfil de Santiago Arredondo Torres, ingeniero de software.",
+    contactDescription: "Contacta a Santiago Arredondo Torres, ingeniero de software.",
   },
 };
 
@@ -68,10 +82,19 @@ function applyTranslations(language) {
   document.querySelectorAll("[data-i18n]").forEach((element) => {
     element.textContent = dictionary[element.dataset.i18n];
   });
+  document.querySelectorAll("[data-i18n-attr]").forEach((element) => {
+    element.dataset.i18nAttr.split(",").forEach((entry) => {
+      const [attribute, key] = entry.split(":");
+      element.setAttribute(attribute, dictionary[key]);
+    });
+  });
+  document.title = document.body.dataset.page === "contact"
+    ? dictionary.contactPageTitle
+    : dictionary.pageTitle;
   const toggle = document.getElementById("language-toggle");
   if (toggle) {
     toggle.setAttribute("aria-pressed", String(language === "es"));
-    toggle.setAttribute("aria-label", language === "es" ? "Switch page to English" : "Cambiar la página a español");
+    toggle.setAttribute("aria-label", dictionary.languageToggle);
     toggle.querySelectorAll("[data-language-option]").forEach((option) => {
       option.classList.toggle("is-active", option.dataset.languageOption === language);
     });
@@ -97,16 +120,18 @@ async function loadData() {
 let currentLanguage = window.localStorage.getItem("site-language") || "en";
 
 function renderProfile(profile) {
+  const isSpanish = currentLanguage === "es";
+  const localized = (item, field) =>
+    isSpanish && item[`${field}Es`] ? item[`${field}Es`] : item[field];
   const aboutSummary = document.getElementById("about-summary");
   if (aboutSummary) {
-    aboutSummary.textContent =
-      currentLanguage === "es" ? spanishProfile.summary : profile.summary;
+    aboutSummary.textContent = isSpanish ? spanishProfile.summary : profile.summary;
   }
 
   const heroRole = document.getElementById("hero-role");
   if (heroRole) {
     heroRole.textContent =
-      currentLanguage === "es" ? spanishProfile.title : profile.title;
+      isSpanish ? spanishProfile.title : profile.title;
   }
 
   const emailLink = document.getElementById("email-link");
@@ -128,7 +153,9 @@ function renderProfile(profile) {
 
   const locationText = document.getElementById("location-text");
   if (locationText) {
-    locationText.textContent = profile.contact.location;
+    locationText.textContent = isSpanish
+      ? profile.contact.locationEs
+      : profile.contact.location;
   }
 
   const linkedinLink = document.getElementById("linkedin-link");
@@ -142,30 +169,30 @@ function renderProfile(profile) {
   }
 
   const skillsList = document.getElementById("skills-list");
-  skillsList.innerHTML = profile.technologies
+  skillsList.innerHTML = (isSpanish ? profile.technologiesEs : profile.technologies)
     .map((skill) => `<li>${skill}</li>`)
     .join("");
 
   const softSkillsList = document.getElementById("soft-skills-list");
-  softSkillsList.innerHTML = profile.softSkills
+  softSkillsList.innerHTML = (isSpanish ? profile.softSkillsEs : profile.softSkills)
     .map((skill) => `<li>${skill}</li>`)
     .join("");
 
   const languagesList = document.getElementById("languages-list");
   languagesList.innerHTML = profile.languages
-    .map((item) => `<li>${item.name} (${item.level})</li>`)
+    .map((item) => `<li>${localized(item, "name")} (${localized(item, "level")})</li>`)
     .join("");
 
   const experienceList = document.getElementById("experience-list");
   experienceList.innerHTML = profile.experience
     .map((item) => {
       const highlights = Array.isArray(item.highlights)
-        ? `<ul class="timeline-highlights">${item.highlights
+        ? `<ul class="timeline-highlights">${(isSpanish ? item.highlightsEs : item.highlights)
             .map((h) => `<li>${h}</li>`)
             .join("")}</ul>`
         : "";
-      const summary = item.summary ? `<p>${item.summary}</p>` : "";
-      return `<li><div class="timeline-meta">${item.period}</div><h3>${item.role}</h3><p class="timeline-company">${item.company}</p>${summary}${highlights}</li>`;
+      const summary = localized(item, "summary") ? `<p>${localized(item, "summary")}</p>` : "";
+      return `<li><div class="timeline-meta">${localized(item, "period")}</div><h3>${localized(item, "role")}</h3><p class="timeline-company">${item.company}</p>${summary}${highlights}</li>`;
     })
     .join("");
 
@@ -173,7 +200,7 @@ function renderProfile(profile) {
   educationList.innerHTML = profile.education
     .map(
       (item) =>
-        `<li><div class="timeline-meta">${item.period}</div><h3>${item.program}</h3><p class="timeline-company">${item.institution}</p></li>`
+        `<li><div class="timeline-meta">${item.period}</div><h3>${localized(item, "program")}</h3><p class="timeline-company">${item.institution}</p></li>`
     )
     .join("");
 
@@ -181,7 +208,7 @@ function renderProfile(profile) {
   certificationsList.innerHTML = profile.certifications
     .map(
       (item) =>
-        `<li><div class="timeline-meta">${item.issued}${item.expires ? ` · ${currentLanguage === "es" ? "Vence" : "Expires"}: ${item.expires}` : ""}</div><h3>${item.name}</h3><p class="timeline-company">${item.issuer}</p></li>`
+        `<li><div class="timeline-meta">${localized(item, "issued")}${item.expires ? ` · ${isSpanish ? "Vence" : "Expires"}: ${localized(item, "expires")}` : ""}</div><h3>${localized(item, "name")}</h3><p class="timeline-company">${item.issuer}</p></li>`
     )
     .join("");
 }
@@ -196,7 +223,7 @@ function renderProjects(projects) {
         <p class="card-index">${String(index + 1).padStart(2, "0")}</p>
         <h3>${currentLanguage === "es" && project.nameEs ? project.nameEs : project.name}</h3>
         <p class="card-summary">${currentLanguage === "es" && project.summaryEs ? project.summaryEs : project.summary}</p>
-        <p class="card-stack"><strong>${dictionary.stack}</strong> ${project.technologies.join(", ")}</p>
+        <p class="card-stack"><strong>${dictionary.stack}</strong> ${(currentLanguage === "es" && project.technologiesEs ? project.technologiesEs : project.technologies).join(", ")}</p>
         ${
           project.url
             ? `<p><a class="secondary-cta" href="${project.url}" target="_blank" rel="noopener noreferrer"><span class="cta-icon" aria-hidden="true">↗</span><span>${dictionary.viewProject}</span></a></p>`

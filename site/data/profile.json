@@ -14,126 +14,188 @@
     "Relational Databases",
     "MongoDB"
   ],
+  "technologiesEs": [
+    "Python",
+    "JavaScript",
+    "Java",
+    "R",
+    "Tableau",
+    "Power BI",
+    "AWS",
+    "Azure",
+    "Bases de datos relacionales",
+    "MongoDB"
+  ],
   "softSkills": [
     "Leadership and mentoring",
     "Teamwork and collaboration",
     "Assertive and commercial communication",
     "Problem solving"
   ],
+  "softSkillsEs": [
+    "Liderazgo y mentoría",
+    "Trabajo en equipo y colaboración",
+    "Comunicación asertiva y comercial",
+    "Resolución de problemas"
+  ],
   "languages": [
     {
       "name": "English",
-      "level": "B2"
+      "nameEs": "Inglés",
+      "level": "B2",
+      "levelEs": "B2"
     },
     {
       "name": "Spanish",
-      "level": "Native"
+      "nameEs": "Español",
+      "level": "Native",
+      "levelEs": "Nativo"
     }
   ],
   "experience": [
     {
       "role": "Sr Applications Management Engineer",
+      "roleEs": "Ingeniero sénior de gestión de aplicaciones",
       "company": "Endava SAS",
       "period": "Sept 2019 - Present",
+      "periodEs": "Sept 2019 - Presente",
       "summary": "As a Level 3 Support Engineer, I contributed to projects focused on critical incident handling, updates, requirement analysis, and application migration management.",
+      "summaryEs": "Como ingeniero de soporte de nivel 3, participé en proyectos enfocados en la gestión de incidentes críticos, actualizaciones, análisis de requerimientos y migración de aplicaciones.",
       "highlights": [
         "Led support for subscription and data management applications; built ETL-based monitoring and automation for user creation, page updates, and test validation.",
         "Managed chatbot migrations across platforms, working with clients to define requirements and improve performance.",
         "Served as a banking system support key member, resolving incidents and driving continuous improvements.",
         "Mentored internship participants and later coordinated program content, interviews, and career coaching."
+      ],
+      "highlightsEs": [
+        "Lideré el soporte de aplicaciones de suscripciones y gestión de datos; construí monitoreo y automatización basados en ETL para creación de usuarios, actualización de páginas y validación de pruebas.",
+        "Gestioné migraciones de chatbots entre plataformas, trabajando con clientes para definir requerimientos y mejorar el rendimiento.",
+        "Fui miembro clave del soporte de sistemas bancarios, resolviendo incidentes e impulsando mejoras continuas.",
+        "Acompañé a participantes de prácticas y posteriormente coordiné contenidos, entrevistas y orientación profesional."
       ]
     },
     {
       "role": "Internship",
+      "roleEs": "Práctica profesional",
       "company": "Endava SAS",
       "period": "Jan 2019 - Jun 2019",
-      "summary": "Participated in technical workshops and practical challenges; collaborated on an internal IoT project covering analysis, development, and tracking."
+      "periodEs": "Ene 2019 - Jun 2019",
+      "summary": "Participated in technical workshops and practical challenges; collaborated on an internal IoT project covering analysis, development, and tracking.",
+      "summaryEs": "Participé en talleres técnicos y desafíos prácticos; colaboré en un proyecto interno de IoT que incluía análisis, desarrollo y seguimiento."
     }
   ],
   "education": [
     {
       "institution": "Universidad Jorge Tadeo Lozano",
       "program": "Systems Engineering",
+      "programEs": "Ingeniería de Sistemas",
       "period": "2015 - 2019"
     },
     {
       "institution": "Berlitz",
       "program": "English B2",
+      "programEs": "Inglés B2",
       "period": "2024"
     },
     {
       "institution": "BBE Languages",
       "program": "English B2",
+      "programEs": "Inglés B2",
       "period": "2021"
     },
     {
       "institution": "BBE Languages",
       "program": "English B1+",
+      "programEs": "Inglés B1+",
       "period": "2020"
     }
   ],
   "certifications": [
     {
       "name": "Data Engineer",
+      "nameEs": "Ingeniero de datos",
       "issuer": "DataCamp",
       "issued": "May 2026",
-      "expires": "May 2028"
+      "issuedEs": "Mayo 2026",
+      "expires": "May 2028",
+      "expiresEs": "Mayo 2028"
     },
     {
       "name": "Python Data Associate",
+      "nameEs": "Asociado de datos en Python",
       "issuer": "DataCamp",
       "issued": "Apr 2026",
-      "expires": "Mar 2028"
+      "issuedEs": "Abr 2026",
+      "expires": "Mar 2028",
+      "expiresEs": "Mar 2028"
     },
     {
       "name": "ChatGPT API for App Dev",
+      "nameEs": "API de ChatGPT para desarrollo de aplicaciones",
       "issuer": "O'Reilly",
-      "issued": "Oct 2025"
+      "issued": "Oct 2025",
+      "issuedEs": "Oct 2025"
     },
     {
       "name": "LLM Performance Engineering",
+      "nameEs": "Ingeniería de rendimiento de LLM",
       "issuer": "O'Reilly",
-      "issued": "Apr 2025"
+      "issued": "Apr 2025",
+      "issuedEs": "Abr 2025"
     },
     {
       "name": "Azure Fundamentals Certificate",
+      "nameEs": "Certificación Azure Fundamentals",
       "issuer": "Microsoft",
       "issued": "2024"
     },
     {
       "name": "Introduction to ChatGPT",
+      "nameEs": "Introducción a ChatGPT",
       "issuer": "DataCamp",
-      "issued": "Apr 2023"
+      "issued": "Apr 2023",
+      "issuedEs": "Abr 2023"
     },
     {
       "name": "Scrum Foundation Professional Certificate",
+      "nameEs": "Certificación profesional Scrum Foundation",
       "issuer": "CertiProf",
-      "issued": "Jul 2020"
+      "issued": "Jul 2020",
+      "issuedEs": "Jul 2020"
     },
     {
       "name": "Curso de Introduccion a Amazon Web Services (AWS) desde cero",
+      "nameEs": "Curso de introducción a Amazon Web Services (AWS) desde cero",
       "issuer": "Udemy",
-      "issued": "Nov 2019"
+      "issued": "Nov 2019",
+      "issuedEs": "Nov 2019"
     },
     {
       "name": "Introduction to Data Visualization in Python",
+      "nameEs": "Introducción a la visualización de datos en Python",
       "issuer": "DataCamp",
-      "issued": "Jul 2019"
+      "issued": "Jul 2019",
+      "issuedEs": "Jul 2019"
     },
     {
       "name": "Intermediate SQL",
+      "nameEs": "SQL intermedio",
       "issuer": "DataCamp",
-      "issued": "Jun 2019"
+      "issued": "Jun 2019",
+      "issuedEs": "Jun 2019"
     },
     {
       "name": "Intermediate Python",
+      "nameEs": "Python intermedio",
       "issuer": "DataCamp",
-      "issued": "Feb 2020"
+      "issued": "Feb 2020",
+      "issuedEs": "Feb 2020"
     }
   ],
   "contact": {
     "email": "santiarrto@gmail.com",
     "location": "Bogota, Colombia",
+    "locationEs": "Bogotá, Colombia",
     "linkedin": "https://www.linkedin.com/in/santiago-arredondo-torres-b8811616a/",
     "github": "https://github.com/santiarrto"
   }

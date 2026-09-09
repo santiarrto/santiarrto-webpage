@@ -6,28 +6,31 @@
     <meta
       name="description"
       content="Profile website for Santiago Arredondo Torres, Software Engineer."
+      data-i18n-attr="content:homeDescription"
     />
     <title>Santiago Arredondo Torres | Software Engineer</title>
+    <link rel="icon" href="./assets/img/favicon.svg" type="image/svg+xml" />
+    <meta name="theme-color" content="#1f2024" />
     <link rel="stylesheet" href="./assets/css/styles.css" />
   </head>
-  <body>
-    <a class="skip-link" href="#main-content">Skip to content</a>
+  <body data-page="home">
+    <a class="skip-link" href="#main-content" data-i18n="skipToContent">Skip to content</a>
 
     <header class="site-header">
       <div class="announcement-bar">
         <div class="container announcement-content">
           <span class="announcement-pill" data-i18n="lastUpdatedLabel">Last update</span>
-          <span data-i18n="lastUpdatedDate">August 13, 2026</span>
+          <span data-i18n="lastUpdatedDate">September 9, 2026</span>
         </div>
       </div>
       <div class="container header-row">
-      <a class="brand" href="#about" aria-label="Santiago Arredondo Torres homepage">
+      <a class="brand" href="#about" data-i18n-attr="aria-label:homepageLabel" aria-label="Santiago Arredondo Torres homepage">
         <span class="brand-mark" aria-hidden="true">
           <img src="./assets/img/face.jpg" alt="" />
         </span>
         <span class="brand-copy">
           <span class="brand-name">Santiago Arredondo</span>
-          <span class="brand-role">Software Engineer</span>
+          <span class="brand-role" data-i18n="softwareEngineer">Software Engineer</span>
         </span>
       </a>
       <button id="language-toggle" class="language-toggle" type="button" aria-pressed="false">
@@ -41,10 +44,10 @@
           aria-expanded="false"
           aria-controls="primary-nav"
         >
-          Menu
+          <span data-i18n="menu">Menu</span>
         </button>
       </div>
-      <nav id="primary-nav" class="primary-nav container" aria-label="Primary">
+      <nav id="primary-nav" class="primary-nav container" data-i18n-attr="aria-label:primaryNav" aria-label="Primary">
         <a href="#about" data-i18n="about">About</a>
         <a href="#skills" data-i18n="skills">Skills</a>
         <a href="#projects" data-i18n="projects">Projects</a>
@@ -109,9 +112,9 @@
         <h2 id="contact-title" data-i18n="contact">Contact</h2>
         <p class="section-kicker" data-i18n="contactKicker">Have a project or opportunity in mind?</p>
         <ul>
-          <li><a id="email-link" href="mailto:santiarrto@gmail.com">Email</a></li>
+          <li><a id="email-link" href="mailto:santiarrto@gmail.com" data-i18n="email">Email</a></li>
           <li><a id="github-link" href="#" rel="noopener noreferrer">GitHub</a></li>
-          <li><span id="location-text">Location</span></li>
+          <li><span id="location-text" data-i18n="location">Location</span></li>
           <li>
             <a id="linkedin-link" href="#" rel="noopener noreferrer">LinkedIn</a>
           </li>
@@ -141,7 +144,7 @@
     </main>
 
     <footer class="site-footer container">
-      <small>© <span id="year"></span> Santiago Arredondo Torres</small>
+      <small><span data-i18n="copyright">©</span> <span id="year"></span> Santiago Arredondo Torres</small>
     </footer>
 
     <script src="./assets/js/main.js"></script>

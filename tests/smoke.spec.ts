@@ -8,6 +8,7 @@ test("loads profile page and primary sections", async ({ page }) => {
     "Santiago Arredondo Torres"
   );
   await expect(page.locator(".announcement-bar")).toContainText("Last update");
+  await expect(page.locator(".announcement-bar")).toContainText("September 9, 2026");
   await expect(page.locator(".announcement-bar")).toHaveClass(/is-hidden/, {
     timeout: 6000,
   });
@@ -43,6 +44,10 @@ test("loads profile page and primary sections", async ({ page }) => {
     "src",
     "./assets/img/face.jpg"
   );
+  await expect(page.locator('link[rel="icon"]')).toHaveAttribute(
+    "href",
+    "./assets/img/favicon.svg"
+  );
   const resumeDownload = page.locator("[data-resume-download]");
   await expect(resumeDownload).toHaveAttribute("download", "");
   await expect(resumeDownload).toHaveAttribute(
@@ -51,10 +56,18 @@ test("loads profile page and primary sections", async ({ page }) => {
   );
   await page.getByRole("button", { name: "Cambiar la página a español" }).click();
   await expect(page.locator("html")).toHaveAttribute("lang", "es");
+  await expect(page.locator(".announcement-bar")).toContainText("9 de septiembre de 2026");
   await expect(page.locator("#about-title")).toContainText(
     "Construyo experiencias digitales confiables"
   );
-  await expect(page.locator("#certifications-list")).toContainText("Vence: May 2028");
+  await expect(page.locator("#certifications-list")).toContainText("Vence: Mayo 2028");
+  await expect(page.locator("#skills-list")).toContainText("Bases de datos relacionales");
+  await expect(page.locator("#soft-skills-list")).toContainText("Liderazgo y mentoría");
+  await expect(page.locator("#experience-list")).toContainText(
+    "Ingeniero sénior de gestión de aplicaciones"
+  );
+  await expect(page.locator("#education-list")).toContainText("Ingeniería de Sistemas");
+  await expect(page.locator("#languages-list")).toContainText("Español (Nativo)");
   await expect(page.locator("#projects-list .card").nth(1)).toContainText(
     "Monitor de acciones en partidos de fútbol"
   );
@@ -62,8 +75,9 @@ test("loads profile page and primary sections", async ({ page }) => {
     "href",
     "./assets/docs/Santiago%20Arredondo%20CV%20Spanish.pdf"
   );
-  await page.getByRole("button", { name: "Switch page to English" }).click();
+  await page.getByRole("button", { name: "Cambiar la página a inglés" }).click();
   await expect(page.locator("html")).toHaveAttribute("lang", "en");
+  await expect(page.locator("#skills-list")).toContainText("Relational Databases");
 });
 
 test("loads the dedicated contact page and exposes an accessible form", async ({ page }) => {
@@ -100,4 +114,12 @@ test("loads the dedicated contact page and exposes an accessible form", async ({
     "href",
     "https://github.com/santiarrto"
   );
+  await page.getByRole("button", { name: "Cambiar la página a español" }).click();
+  await expect(page.locator("html")).toHaveAttribute("lang", "es");
+  await expect(page).toHaveTitle(/Contacto/);
+  await expect(page.getByRole("heading", { level: 1 })).toContainText(
+    "Construyamos algo útil."
+  );
+  await expect(page.getByLabel("Nombre")).toBeVisible();
+  await expect(page.getByRole("link", { name: "Enviar correo directamente" })).toBeVisible();
 });
