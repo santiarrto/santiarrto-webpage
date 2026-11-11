@@ -20,7 +20,7 @@
       <div class="announcement-bar">
         <div class="container announcement-content">
           <span class="announcement-pill" data-i18n="lastUpdatedLabel">Last update</span>
-          <span data-i18n="lastUpdatedDate">September 9, 2026</span>
+          <span data-i18n="lastUpdatedDate">November 11, 2026</span>
         </div>
       </div>
       <div class="container header-row">
@@ -85,7 +85,12 @@
       <section id="projects" aria-labelledby="projects-title">
         <h2 id="projects-title" data-i18n="featuredProjects">Featured projects</h2>
         <p class="section-kicker" data-i18n="projectsKicker">Ways I create value through engineering</p>
-        <div id="projects-list" class="cards" aria-live="polite"></div>
+        <div class="projects-carousel" role="region" aria-roledescription="carousel" aria-label="Featured projects carousel" data-i18n-attr="aria-label:projectsCarouselLabel">
+          <div id="projects-list" class="cards"></div>
+        </div>
+        <div class="projects-carousel-controls">
+          <button id="projects-carousel-toggle" class="carousel-toggle" type="button" aria-controls="projects-list" data-i18n="pauseCarousel">Pause animation</button>
+        </div>
       </section>
 
       <section id="experience" aria-labelledby="experience-title">

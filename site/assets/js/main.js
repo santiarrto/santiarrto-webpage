@@ -13,7 +13,9 @@ const translations = {
     emailDirectly: "Email directly", otherWays: "Other ways to connect",
     languageButton: "Español", openingEmail: "Opening your email client...",
     stack: "Stack:", viewProject: "View project", lastUpdatedLabel: "Last update",
-    lastUpdatedDate: "September 9, 2026", skipToContent: "Skip to content",
+    lastUpdatedDate: "November 11, 2026", skipToContent: "Skip to content",
+    projectsCarouselLabel: "Featured projects carousel",
+    pauseCarousel: "Pause animation", resumeCarousel: "Resume animation",
     softwareEngineer: "Software Engineer", menu: "Menu", primaryNav: "Primary",
     homepageLabel: "Santiago Arredondo Torres homepage", location: "Location",
     copyright: "©", languageToggle: "Cambiar la página a español",
@@ -36,7 +38,9 @@ const translations = {
     emailDirectly: "Enviar correo directamente", otherWays: "Otras formas de contacto",
     languageButton: "English", openingEmail: "Abriendo tu cliente de correo...",
     stack: "Tecnologías:", viewProject: "Ver proyecto", lastUpdatedLabel: "Última actualización",
-    lastUpdatedDate: "9 de septiembre de 2026", skipToContent: "Saltar al contenido",
+    lastUpdatedDate: "11 de noviembre de 2026", skipToContent: "Saltar al contenido",
+    projectsCarouselLabel: "Carrusel de proyectos destacados",
+    pauseCarousel: "Pausar animación", resumeCarousel: "Reanudar animación",
     softwareEngineer: "Ingeniero de software", menu: "Menú", primaryNav: "Principal",
     homepageLabel: "Página principal de Santiago Arredondo Torres", location: "Ubicación",
     copyright: "©", languageToggle: "Cambiar la página a inglés",
@@ -56,6 +60,8 @@ const resumeFiles = {
   en: "./assets/docs/Santiago%20Arredondo%20CV%20English.pdf",
   es: "./assets/docs/Santiago%20Arredondo%20CV%20Spanish.pdf",
 };
+
+let projectCarouselPaused = false;
 
 function applyResumeDownload(language) {
   const resumeLink = document.querySelector("[data-resume-download]");
@@ -100,6 +106,12 @@ function applyTranslations(language) {
     });
   }
   applyResumeDownload(language);
+  const carouselToggle = document.getElementById("projects-carousel-toggle");
+  if (carouselToggle) {
+    carouselToggle.textContent = dictionary[
+      projectCarouselPaused ? "resumeCarousel" : "pauseCarousel"
+    ];
+  }
 }
 
 async function loadData() {
@@ -216,23 +228,45 @@ function renderProfile(profile) {
 function renderProjects(projects) {
   const projectsList = document.getElementById("projects-list");
   const dictionary = translations[currentLanguage];
-  projectsList.innerHTML = projects
-    .map(
-      (project, index) => `
-      <article class="card">
-        <p class="card-index">${String(index + 1).padStart(2, "0")}</p>
-        <h3>${currentLanguage === "es" && project.nameEs ? project.nameEs : project.name}</h3>
-        <p class="card-summary">${currentLanguage === "es" && project.summaryEs ? project.summaryEs : project.summary}</p>
-        <p class="card-stack"><strong>${dictionary.stack}</strong> ${(currentLanguage === "es" && project.technologiesEs ? project.technologiesEs : project.technologies).join(", ")}</p>
-        ${
-          project.url
-            ? `<p><a class="secondary-cta" href="${project.url}" target="_blank" rel="noopener noreferrer"><span class="cta-icon" aria-hidden="true">↗</span><span>${dictionary.viewProject}</span></a></p>`
-            : ""
-        }
-      </article>
-    `
-    )
-    .join("");
+  const renderCards = (isDuplicate) =>
+    projects
+      .map(
+        (project, index) => `
+        <article class="card${index === 0 ? " card--featured" : ""}">
+          <p class="card-index">${String(index + 1).padStart(2, "0")}</p>
+          <h3>${currentLanguage === "es" && project.nameEs ? project.nameEs : project.name}</h3>
+          <p class="card-summary">${currentLanguage === "es" && project.summaryEs ? project.summaryEs : project.summary}</p>
+          <p class="card-stack"><strong>${dictionary.stack}</strong> ${(currentLanguage === "es" && project.technologiesEs ? project.technologiesEs : project.technologies).join(", ")}</p>
+          ${
+            project.url
+              ? `<p><a class="secondary-cta" href="${project.url}" target="_blank" rel="noopener noreferrer"${isDuplicate ? ' tabindex="-1"' : ""}><span class="cta-icon" aria-hidden="true">↗</span><span>${dictionary.viewProject}</span></a></p>`
+              : ""
+          }
+        </article>
+      `
+      )
+      .join("");
+  const cards = renderCards(false);
+  projectsList.innerHTML = `
+    <div class="project-card-set">${cards}</div>
+    <div class="project-card-set" aria-hidden="true">${renderCards(true)}</div>
+  `;
+}
+
+function wireProjectCarousel() {
+  const projectsList = document.getElementById("projects-list");
+  const toggle = document.getElementById("projects-carousel-toggle");
+  if (!projectsList || !toggle) {
+    return;
+  }
+
+  toggle.addEventListener("click", () => {
+    projectCarouselPaused = !projectCarouselPaused;
+    projectsList.classList.toggle("is-paused", projectCarouselPaused);
+    toggle.textContent = translations[currentLanguage][
+      projectCarouselPaused ? "resumeCarousel" : "pauseCarousel"
+    ];
+  });
 }
 
 function wireMenu() {
@@ -284,6 +318,7 @@ async function init() {
     renderProfile(profile);
     if (document.getElementById("projects-list")) {
       renderProjects(projects);
+      wireProjectCarousel();
     }
     wireAnnouncement();
     wireContactForm(profile.contact.email);

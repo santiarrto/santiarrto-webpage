@@ -1,5 +1,23 @@
 [
   {
+    "name": "Traffic Insights",
+    "nameEs": "Traffic Insights",
+    "summary": "A local interactive dashboard for exploring traffic-injury data in Colombia through geographic maps, temporal trends, and regional comparisons.",
+    "summaryEs": "Tablero local e interactivo para explorar datos de víctimas de accidentes de tránsito en Colombia mediante mapas geográficos, tendencias temporales y comparaciones regionales.",
+    "technologies": ["Python", "Streamlit", "DuckDB", "Pydeck", "Altair"],
+    "technologiesEs": ["Python", "Streamlit", "DuckDB", "Pydeck", "Altair"],
+    "url": "https://github.com/santiarrto/traffic-insights"
+  },
+  {
+    "name": "ClimaSoluciones Website & Email System",
+    "nameEs": "Sitio web y sistema de correo de ClimaSoluciones",
+    "summary": "Maintained ClimaSoluciones' GoDaddy website and migrated selected private pages to Azure Static Web Apps, with Azure Functions and the Resend API powering email delivery.",
+    "summaryEs": "Di mantenimiento al sitio de ClimaSoluciones en GoDaddy y migré algunas páginas privadas a Azure Static Web Apps, con Azure Functions y la API de Resend para el envío de correos.",
+    "technologies": ["GoDaddy", "Azure Static Web Apps", "Azure Functions", "Resend API"],
+    "technologiesEs": ["GoDaddy", "Azure Static Web Apps", "Azure Functions", "API de Resend"],
+    "url": "https://climasoluciones.com.co/"
+  },
+  {
     "name": "Personal Profile Website",
     "nameEs": "Sitio web de perfil personal",
     "summary": "Static, accessible profile site with JSON-driven content and CI validation.",
