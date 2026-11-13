@@ -1,5 +1,14 @@
 [
   {
+    "name": "Dice Game: Survive",
+    "nameEs": "Juego de dados: Sobrevivir",
+    "summary": "A responsive turn-based web game for 2 to 8 players. Configure players and avatars, roll animated dice, and view game history saved in the browser.",
+    "summaryEs": "Aplicación web adaptable para jugar por turnos de 2 a 8 participantes. Permite configurar jugadores y avatares, lanzar dados animados y consultar el historial de partidas guardado en el navegador.",
+    "technologies": ["React", "TypeScript", "Vite", "CSS", "localStorage"],
+    "technologiesEs": ["React", "TypeScript", "Vite", "CSS", "localStorage"],
+    "url": "https://dice-game-kappa-fawn.vercel.app/"
+  },
+  {
     "name": "Traffic Insights",
     "nameEs": "Traffic Insights",
     "summary": "A local interactive dashboard for exploring traffic-injury data in Colombia through geographic maps, temporal trends, and regional comparisons.",

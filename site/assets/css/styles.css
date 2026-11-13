@@ -609,6 +609,11 @@ h3 {
   border-color: #e8c078;
 }
 
+.project-card-set .card:nth-child(6) {
+  background: linear-gradient(145deg, #285e65 0%, #29464a 58%, #292a32 100%);
+  border-color: #86c9ce;
+}
+
 .card:hover,
 .card:focus-within {
   transform: translateY(-4px);

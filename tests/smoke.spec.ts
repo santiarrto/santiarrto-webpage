@@ -8,7 +8,7 @@ test("loads profile page and primary sections", async ({ page }) => {
     "Santiago Arredondo Torres"
   );
   await expect(page.locator(".announcement-bar")).toContainText("Last update");
-  await expect(page.locator(".announcement-bar")).toContainText("November 11, 2026");
+  await expect(page.locator(".announcement-bar")).toContainText("November 13, 2026");
   await expect(page.locator(".announcement-bar")).toHaveClass(/is-hidden/, {
     timeout: 6000,
   });
@@ -40,16 +40,25 @@ test("loads profile page and primary sections", async ({ page }) => {
   const projectCards = page.locator(
     "#projects-list > .project-card-set:not([aria-hidden='true']) > .card"
   );
-  await expect(projectCards).toHaveCount(5);
-  await expect(projectCards.locator(".secondary-cta")).toHaveCount(3);
-  await expect(projectCards.first().getByRole("heading")).toHaveText("Traffic Insights");
+  await expect(projectCards).toHaveCount(6);
+  await expect(projectCards.locator(".secondary-cta")).toHaveCount(4);
+  await expect(projectCards.first().getByRole("heading")).toHaveText("Dice Game: Survive");
+  await expect(projectCards.first()).toContainText("2 to 8 players");
+  await expect(projectCards.first()).toContainText("React, TypeScript, Vite, CSS, localStorage");
+  await expect(projectCards.first().getByRole("link", { name: "View project" })).toHaveAttribute(
+    "href",
+    "https://dice-game-kappa-fawn.vercel.app/"
+  );
   await expect(projectCards.nth(1).getByRole("heading")).toHaveText(
+    "Traffic Insights"
+  );
+  await expect(projectCards.nth(2).getByRole("heading")).toHaveText(
     "ClimaSoluciones Website & Email System"
   );
-  await expect(projectCards.nth(1)).toContainText(
+  await expect(projectCards.nth(2)).toContainText(
     "Azure Static Web Apps, with Azure Functions and the Resend API"
   );
-  await expect(projectCards.nth(1).getByRole("link", { name: "View project" })).toHaveAttribute(
+  await expect(projectCards.nth(2).getByRole("link", { name: "View project" })).toHaveAttribute(
     "href",
     "https://climasoluciones.com.co/"
   );
@@ -82,7 +91,7 @@ test("loads profile page and primary sections", async ({ page }) => {
   );
   await page.getByRole("button", { name: "Cambiar la página a español" }).click();
   await expect(page.locator("html")).toHaveAttribute("lang", "es");
-  await expect(page.locator(".announcement-bar")).toContainText("11 de noviembre de 2026");
+  await expect(page.locator(".announcement-bar")).toContainText("13 de noviembre de 2026");
   await expect(page.locator("#about-title")).toContainText(
     "Construyo experiencias digitales confiables"
   );
@@ -94,13 +103,17 @@ test("loads profile page and primary sections", async ({ page }) => {
   );
   await expect(page.locator("#education-list")).toContainText("Ingeniería de Sistemas");
   await expect(page.locator("#languages-list")).toContainText("Español (Nativo)");
-  await expect(projectCards.nth(3)).toContainText(
+  await expect(projectCards.nth(4)).toContainText(
     "Monitor de acciones en partidos de fútbol"
   );
-  await expect(projectCards.nth(1)).toContainText(
+  await expect(projectCards.nth(2)).toContainText(
     "migré algunas páginas privadas a Azure Static Web Apps"
   );
+  await expect(projectCards.first().getByRole("heading")).toHaveText("Juego de dados: Sobrevivir");
   await expect(projectCards.first()).toContainText(
+    "Aplicación web adaptable para jugar por turnos de 2 a 8 participantes"
+  );
+  await expect(projectCards.nth(1)).toContainText(
     "Tablero local e interactivo para explorar datos de víctimas de accidentes de tránsito en Colombia"
   );
   await expect(resumeDownload).toHaveAttribute(
